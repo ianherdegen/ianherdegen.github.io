@@ -10,68 +10,193 @@
       }
       
       #search-field {
-          padding: 5px;
-          border: none;
-      }
-      body {
-        background-color: #000000;
-      }
-      #data-container {
-        text-align: center;
-      }
-      .card {
-        width: 280px;
-        height: 500px;
-        box-sizing: border-box;
-        padding: 10px;
-        margin: 10px;
-        background-color: #ffffff;
-        border-radius: 10px;
-        display: inline-block;
-        text-align: center;
-        overflow: hidden;
-        transition: 0.3s;
-      }
-    
-      .card img {
-        width: 200px;
-        height: 200px;
-        display: block;
-        margin: 0 auto;
-        transition: 0.3s;
-      }
+      padding: 5px;
+      border: none;
+}
+body {
+background-color: #000000;
+}
+#data-container {
+text-align: center;
+}
+.card {
+width: 150px;
+height: 150px;
+box-sizing: border-box;
+padding: 10px;
+margin: 10px;
+background-color: #ffffff;
+border-radius: 10px;
+display: inline-block;
+text-align: center;
+overflow: hidden;
+transition: 0.3s;
 
-    
-      .card p {
-        margin: 0;
-        padding: 5px;
-        text-align: left;
-        transition: 0.3s;
-        color: #000000;
-      }
-      .card:hover {
-        box-shadow: 0px 0px 10px #aaa;
-        transform: scale(1.05);
-        transition: 0.2s;
-      }
+}
 
-      .bw-filter {
-        filter: grayscale(100%);
-      }
+.card img {
+width: 120px;
+height: 120px;
+display: block;
+margin: 0 auto;
+transition: 0.3s;
+animation: pulse 2s infinite;
+}
 
-    </style>    
-    <title>NFT Display</title>
+.card p {
+margin: 0;
+padding: 5px;
+text-align: left;
+transition: 0.3s;
+color: #000000;
+}
+.card:hover {
+box-shadow: 0px 0px 10px #aaa;
+transform: scale(1.05);
+transition: 0.2s;
+}
+
+.bw-filter {
+filter: grayscale(100%);
+}
+@keyframes pulse {
+0% {
+transform: scale(0.95);
+box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+}
+
+
+
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+      filter: grayscale(80%);
+    }
+
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+  
+  .alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    z-index: 1;
+}
+
+.alert-content {
+    text-align: center;
+    font-size: 2em;
+}
+
+
+</style>    
+<style>
+  #info-container {
+    text-align: center;
+
+    background-color: #f2f2f2;
+    width: 50%;
+
+    padding: 20px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+#info-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#info-body {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#info-line1, #info-line2 {
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #dddddd;
+}
+
+</style>
+
+<title>Cyber Cosmos</title>
+
   </head>
   <body>
+
     <header>
         <div id="header-content">
             <img src="CCLogo.png" alt="Girl in a jacket" width="300" height="auto">
+            <br>
+            <br>
             <form>
               <input type="text" id="search-input" placeholder="Search...">
               <button type="button" onclick="search()">Search</button>
             </form>
         </div>
     </header>  
+    <br>
+    <br>
+
+    <br>
+
+    <div id="info-container">
+      <div id="info-header">
+        <h2>Token Information</h2>
+      </div>
+      <div id="info-body">
+        <div id="info-line1"><strong>Total # of Holders:</strong> 25</div>
+        <div id="info-line2"><strong>294/350</strong> Tokens Remaining</div>
+        <div id="info-line3">
+          <table>
+            <tr>
+              <th>Rank</th>
+              <th>Name</th>
+              <th>Tokens</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Braedon Creal 10</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Ian Herdegen</td>
+              <td>11</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Ryan McNamara</td>
+              <td>3</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    
     <br>
     <br>
     <script>
@@ -87,18 +212,27 @@
           // Check if the card text includes the search value
           if (cardText.toLowerCase().includes(searchValue.toLowerCase())) {
             // If it does, show the card
-            cards[i].style.display = "block";
+            cards[i].style.display = "inline-block";
           } else {
             // If it doesn't, hide the card
             cards[i].style.display = "none";
+            
           }
         }
       }
     </script>
+    <audio controls autoplay hidden loop>
+      <source src="gems.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    
+    <br>
+    <br>
     <div id="data-container"></div>
     <script>
       // JSON data
       let data = [
+      
  {
    "Name": "Brittain 1",
    "School": "Georgia Tech",
@@ -4650,39 +4784,89 @@
    "Wallet": ""
  }
 ];
-      let attributes = ["Name", "Type", "School", "Frame", "Sky", "Time of Day", "Astronomy","Owner","Wallet"];
-      // Loop through the items in the data
-      data.forEach(item => {
-        // Get the value of the "image" attribute
-        let imageName = item.Image;
-        // Create an image element
-        let image = document.createElement("img");
-        if (!item["Owner"]) {
-          image.classList.add("bw-filter");
-        }
-        // Create a div to hold the image
-        let card= document.createElement("div");
-        card.classList.add('card');
-        // Append the image to the div
-        card.appendChild(image);
-        card.appendChild(document.createElement("br"));
-        // Set the source of the image to the file in the "NFTS" folder
-        image.src = `NFTS/${imageName}.png`;
-        // Loop through the list of attributes
-        attributes.forEach(attr => {
-          if (item[attr]) {
-            // Create a p element for the attribute
-            let p = document.createElement("p");
-            p.innerHTML = `<b>${attr}</b>: ${item[attr]}`;
-            // Append the p element to the card
-            card.appendChild(p);
-          }
-        });
-        // Append the div to the data container
-        document.getElementById("data-container").appendChild(card);
-      });
+let attributes = ["Name", "Type", "School", "Frame", "Sky", "Time of Day", "Astronomy","Owner","Wallet"];
+  // Loop through the items in the data
+  data.forEach(item => {
+    // Get the value of the "image" attribute
+    let imageName = item.Image;
+    // Create an image element
+    let image = document.createElement("img");
+    if (!item["Owner"]) {
+      image.classList.add("bw-filter");
+    }
+    // Create a div to hold the image
+    let card= document.createElement("div");
+    card.classList.add('card');
+    // Append the image to the div
+    card.appendChild(image);
+    card.appendChild(document.createElement("br"));
+    // Set the source of the image to the file in the "NFTS" folder
+    image.src = `NFTS/${imageName}.png`;
+    // Loop through the list of attributes
+    attributes.forEach(attr => {
+      if (item[attr]) {
+        // Create a p element for the attribute
+        let p = document.createElement("p");
+        p.innerHTML = `${attr}: ${item[attr]}`;
+        // Append the p element to the card
+        card.appendChild(p);
+      }
+    });
+    card.addEventListener('click', () => {
+      let existingPopup = document.querySelector(".popup");
+    if (existingPopup) {
+        existingPopup.remove();
+    }
+    let popup = document.createElement("div");
+    popup.classList.add('popup');
+    popup.style.cssText = 'position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; padding:20px; border: 2px solid #ccc;';
+    let title = document.createElement("h2");
+    title.innerText = "Information";
+    title.style.cssText = 'text-align:center;';
+    let closeBtn = document.createElement("button");
+    closeBtn.innerText = "Close";
+    closeBtn.style.cssText = 'position:absolute; top:0; right:0; padding:5px;';
+    closeBtn.addEventListener("click",()=>{
+      popup.remove();
+    });
+    let attributesContainer = document.createElement("pre");
+    attributesContainer.style.cssText = 'text-align:left;';
+    attributes.forEach(attr => {
+      if (item[attr]) {
+        // Create a p element for the attribute
+        let p = document.createElement("p");
+        p.innerHTML = `<b>${attr}</b>: ${item[attr]}\n`;
+        // Append the p element to the attributesContainer
+        attributesContainer.appendChild(p);
+      }
+    });
+    popup.appendChild(title);
+    popup.appendChild(closeBtn);
+    popup.appendChild(attributesContainer);
+    document.body.appendChild(popup);
+    });
+    // Append the div to the data container
+    document.getElementById("data-container").appendChild(card);
+  });
+
+  document.addEventListener("click", event => {
+if (!event.target.closest(".card") && !event.target.closest(".popup")) {
+let popups = document.querySelectorAll(".popup"); // <-- changed here
+popups.forEach(popup => {
+popup.remove();
+});
+}
+});
+
+
+
+
 
     </script>
+
+ 
+
+      
   </body>
 </html>
 
