@@ -1,0 +1,96 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Crypto Campus Scoreboard</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="Scores.css">
+
+  <!-- Google Sheets Scripts -->
+  <script>
+    const spreadsheetId = "1ClCaAC36HBPJ-SPbDDcK9r8CMNIqRWQ3ZORGZRPbddc";
+    const range = "Tracker!A1:C";
+    
+    const apiKey = "AIzaSyAf1sHsmPrUw_GayBGgI_DowzN2ky7IJCs";
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${range}?key=${apiKey}`;
+
+    fetch(apiUrl)
+    .then(response => response.json())
+    .then(data => {
+        console.log("Data:", data);
+        const teamContainer = document.querySelector(".team-container");
+        for (let i = 1; i < data.values.length; i++) {
+        const teamName = data.values[i][0];
+        const subtitle = data.values[i][1];
+        const progressWidth = data.values[i][2];
+
+        const progressTopColor =
+            i === 1
+            ? "#fabc05"
+            : i === 2
+            ? "#cccccc"
+            : i === 3
+            ? "#ce7800"
+            : "#6d9eeb";
+        const progressBottomColor =
+            i === 1
+            ? "#be8e00"
+            : i === 2
+            ? "#707070"
+            : i === 3
+            ? "#925500"
+            : "#2c65be";
+
+
+        const newTeam = document.createElement("div");
+        newTeam.classList.add("team");
+
+        const title = document.createElement("h3");
+        title.classList.add("progress-title");
+        title.style.fontSize = "xx-large";
+        title.style.color = "white";
+        title.textContent = teamName;
+        newTeam.appendChild(title);
+
+        const subtitleEl = document.createElement("h3");
+        subtitleEl.classList.add("progress-title");
+        subtitleEl.style.fontSize = "x-large";
+        subtitleEl.style.color = "white";
+        subtitleEl.textContent = subtitle;
+        newTeam.appendChild(subtitleEl);
+
+        const progressBar = document.createElement("div");
+        progressBar.classList.add("progress");
+        const progressBarInner = document.createElement("div");
+        progressBarInner.classList.add("progress-bar");
+        progressBarInner.style.width = `${progressWidth}%`;
+        progressBarInner.style.background = `linear-gradient(to bottom, ${progressTopColor}, ${progressBottomColor})`;
+        progressBar.appendChild(progressBarInner);
+        newTeam.appendChild(progressBar);
+
+        teamContainer.appendChild(newTeam);
+        }
+    })
+    .catch(error => console.error("Error:", error));
+  </script>
+
+</head>
+
+
+<body>
+    
+<div class="container">
+    <div class="status-bar-containers">
+        <div class="row">
+            <div class="col-md-auto col-md-auto">
+
+                <div class="team-container">
+                </div>
+                
+            </div>
+        </div>
+    </div>  
+</div>
+
+
+</body>
+</html>
