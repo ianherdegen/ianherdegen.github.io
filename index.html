@@ -1,80 +1,184 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      html, body {
-        height: 100%;
-      }
-      body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-image:url('Background.gif');
-        background-repeat: repeat;
-        background-size: 50%;
-
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pixel Art Viewer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fefefe;
     }
-      .container {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        padding: 0px 16px;
-      }
-      .container div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 3px dotted white;
-}
 
-      img {
-        width: 100%;
-        border-radius: 32px;
-        border: 3px dotted white;
+    #folderSelector {
+      margin: 20px;
+      padding: 10px;
+      background-color: #333;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-      }
-      h3 {
-    color: white;
-    text-decoration: none;
-    transition: all 0.2s ease-in-out;
-  }
-  h3:hover {
-    text-decoration: underline;
-  }
-      @media (max-width: 767px) {
-        .container {
-            width: 100%;
-            }
-        }
-        
-        /* Styles for tablet screens */
-        @media (min-width: 768px) and (max-width: 1023px) {
-            .container {
-            width: 100%;
-            }
-        }
+    #pixelArtContainer {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
 
-  
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <img src="Header.png">
-      <br>
-      <div style="border-radius: 32px; background-color: rgba(2, 28, 0, 0.75)">
-        <!-- <h3 style="font-size: xx-large; color: white;">
-          <a href="https://forms.gle/xCQ99dtTSmjcvvSw7" style="color: white; text-decoration: none;">SIGN UP</a>
-        </h3> -->
-        <h3 style="font-size: xx-large; color: white;">
-          <a href="https://www.youtube.com/watch?v=QLbj-9r5H30" style="color: white; text-decoration: none;">CLUE ONE</a>
-        </h3>
-        <h3 style="font-size: xx-large; color: white;">
-          <a href="https://www.youtube.com/watch?v=EPvhZjIiZIM" style="color: white; text-decoration: none;">TEASER</a>
-        </h3>
-        <h3 style="font-size: xx-large; color: white;">
-          <a href="Scores.html" style="color: white; text-decoration: none;">SCORES</a>
-        </h3>
-      </div>
+    #pixelArtGrid {
+      display: grid;
+      grid-template-columns: repeat(10, 36px);
+      grid-template-rows: repeat(5, 36px);
+      gap: 5px;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+      image-rendering: pixelated;
+    }
+
+    img:hover {
+      transform: scale(1.2);
+    }
+
+    #zoomedImageContainer {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+
+    #zoomedImageContainer img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    #emptyState {
+      font-size: 16px;
+      color: #888;
+    }
+    
+    @media (max-width: 600px) {
+    #pixelArtGrid {
+        grid-template-columns: repeat(5, 36px);
+        grid-template-rows: repeat(10, 36px);
+    }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="folderSelector">
+    <label for="folder">Select School:</label>
+    <select id="folder" onchange="loadPixelArt()"></select>
+  </div>
+
+  <div id="pixelArtContainer">
+    <div id="pixelArtGrid"></div>
+    <div id="zoomedImageContainer">
+      <div id="emptyState">Hover over a pixel art to see the zoomed version</div>
     </div>
-  </body>
+  </div>
+
+  <script>
+    const folderSelector = document.getElementById('folder');
+    const pixelArtGrid = document.getElementById('pixelArtGrid');
+    const zoomedImageContainer = document.getElementById('zoomedImageContainer');
+    const emptyState = document.getElementById('emptyState');
+
+    // Hardcoded list of folder names (school names)
+    const folders = [
+      'University of Michigan',
+      'University of Wisconsin',
+      'University of Chicago',
+      'Ohio State University',
+      'Georgia Tech',
+      'UC Berkeley',
+      'Miami Ohio'
+    ];
+
+    // Populate dropdown menu
+    function populateFolderDropdown() {
+      folderSelector.innerHTML = '';
+      folders.forEach(folder => {
+        const option = document.createElement('option');
+        option.value = folder;
+        option.textContent = folder;
+        folderSelector.appendChild(option);
+      });
+    }
+
+    // Shuffle image order
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    // Load pixel art based on selected folder
+    function loadPixelArt() {
+      const folder = folderSelector.value;
+      pixelArtGrid.innerHTML = '';
+
+      const imageSources = [];
+      for (let i = 1; i <= 50; i++) {
+        imageSources.push(`Designs/${folder}/${i}.png`);
+      }
+
+      shuffleArray(imageSources);
+
+      imageSources.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = `Pixel Art`;
+        img.dataset.src = src;
+        img.addEventListener('mouseenter', showZoomedImage);
+        img.addEventListener('mouseleave', hideZoomedImage);
+        pixelArtGrid.appendChild(img);
+      });
+    }
+
+    // Show zoomed image
+    function showZoomedImage(event) {
+      const imgSrc = event.target.dataset.src;
+      zoomedImageContainer.innerHTML = `<img src="${imgSrc}" alt="Zoomed Image">`;
+      emptyState.style.display = 'none';
+    }
+
+    // Hide zoomed image
+    function hideZoomedImage() {
+      zoomedImageContainer.innerHTML = '';
+      emptyState.style.display = 'block';
+    }
+
+    // Initialize page
+    populateFolderDropdown();
+    loadPixelArt();
+  </script>
+
+</body>
 </html>
