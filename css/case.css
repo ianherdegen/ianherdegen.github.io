@@ -11,6 +11,8 @@
   --accent: #1a6b63;
   --accent-soft: rgba(26, 107, 99, 0.1);
   --kpi-num: #7dd3c7;
+  --kpi-bg: #12151a;
+  --kpi-gap: #1c222b;
   --est-num: #e8a87c;
   --white: #f7f8fa;
   --font-display: "Syne", sans-serif;
@@ -24,6 +26,8 @@ body.case-bms {
   --accent: #1f6b8a;
   --accent-soft: rgba(31, 107, 138, 0.1);
   --kpi-num: #7eb8d4;
+  --kpi-bg: #0c1a22;
+  --kpi-gap: #143040;
   --est-num: #a8d0e4;
   --signal: #1f6b8a;
   --signal-deep: #155066;
@@ -33,6 +37,8 @@ body.case-sculpt {
   --accent: #c45c26;
   --accent-soft: rgba(196, 92, 38, 0.1);
   --kpi-num: #e8956a;
+  --kpi-bg: #1a100c;
+  --kpi-gap: #2a1810;
   --est-num: #f0b48a;
   --signal: #c45c26;
   --signal-deep: #8f3d12;
@@ -42,6 +48,8 @@ body.case-beacon {
   --accent: #a32d45;
   --accent-soft: rgba(163, 45, 69, 0.1);
   --kpi-num: #e08a9a;
+  --kpi-bg: #160a10;
+  --kpi-gap: #2a121a;
   --est-num: #f0b0bc;
   --signal: #a32d45;
   --signal-deep: #7a2034;
@@ -301,15 +309,17 @@ a:hover { color: var(--signal-deep); }
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1px;
-  background: var(--ink);
-  border: 1px solid var(--ink);
+  background: var(--kpi-gap);
+  border: 1px solid var(--kpi-gap);
   margin: 0 0 2.5rem;
 }
 @media (min-width: 720px) {
   .kpi-board { grid-template-columns: repeat(4, 1fr); }
 }
 .kpi-board .kpi {
-  background: var(--ink);
+  background:
+    linear-gradient(165deg, color-mix(in srgb, var(--accent) 14%, transparent), transparent 55%),
+    var(--kpi-bg);
   color: var(--white);
   padding: 1.35rem 1.15rem 1.25rem;
 }
