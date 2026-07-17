@@ -198,87 +198,112 @@
         <section class="walk reveal">
           <h2>How the product works</h2>
           <p>
-            Sculpt Architect is the loop instructors run every week: sign in, build a timed sequence, reuse poses from a library,
-            share publicly when ready, and keep multi-instructor access under admin control.
+            After magic-link or credential sign-in, instructors move through six surfaces: build a timed sequence,
+            pull from the pose catalog, find saved work in the sequence library, share a public sequence URL,
+            publish a profile with schedule, and keep multi-instructor access under admin control.
           </p>
 
           <div class="walk-step">
             <div class="walk-copy">
-              <p class="walk-kicker">Surface 01</p>
-              <h3>Auth into a private workspace</h3>
-              <p class="walk-goal">Goal: get instructors into a private workspace</p>
+              <p class="walk-kicker">Surface 01 · Sequence Builder</p>
+              <h3>Plan the class on a clock</h3>
+              <p class="walk-goal">Goal: design a timed sequence with sections and group blocks</p>
               <p>
-                Magic-link verification and credential login drop instructors into their own practice workspace —
-                sequences stay private until they choose to publish. That boundary mattered before
-                any of the craft tools were useful.
+                Sequences start here — sections, pose instances, group blocks, drag reorder, and duration calculation.
+                Templates and clone keep recurring classes from being rebuilt from scratch.
               </p>
             </div>
             <div class="walk-media">
               <figure class="media-block" style="margin:0">
-                <img src="../assets/sculpt/login.jpg" alt="Sculpt Architect login screen" />
-                <figcaption>Auth — magic-link / credentials into the instructor workspace</figcaption>
+                <img src="../assets/sculpt/screenshot.jpg" alt="Sculpt Architect Sequence Builder" />
+                <figcaption>Sequence Builder — sections, timed poses, and nested group blocks</figcaption>
               </figure>
             </div>
           </div>
 
           <div class="walk-step walk-step--flip">
             <div class="walk-copy">
-              <p class="walk-kicker">Surface 02</p>
-              <h3>Teach on a timer</h3>
-              <p class="walk-goal">Goal: teach on a timer (play / pause / next)</p>
+              <p class="walk-kicker">Surface 02 · Pose Library</p>
+              <h3>Reuse poses instead of rewriting them</h3>
+              <p class="walk-goal">Goal: build from a shared catalog of poses and variants</p>
               <p>
-                The sequence runner is what turns a plan into a class: play, pause, and advance while the clock runs.
-                Instructors stay on the floor with students instead of flipping between a spreadsheet and a phone timer.
+                Poses and variations are their own saved objects — 50+ in the catalog — so instructors pull the same move
+                into many sequences instead of typing it again for every class.
               </p>
             </div>
             <div class="walk-media">
               <figure class="media-block" style="margin:0">
-                <img src="../assets/sculpt/runner.gif" alt="Sculpt Architect sequence runner — start, pause, and timed pose progress" />
-                <figcaption>Sequence runner — start / pause with live pose progress on the clock</figcaption>
+                <img src="../assets/sculpt/pose-library.jpg" alt="Sculpt Architect Pose Library" />
+                <figcaption>Pose Library — catalog depth behind every sequence</figcaption>
               </figure>
             </div>
           </div>
 
           <div class="walk-step">
             <div class="walk-copy">
-              <p class="walk-kicker">Surface 03</p>
-              <h3>Builder → library → public share</h3>
-              <p class="walk-goal">Goal: close the craft loop from draft to deep link</p>
+              <p class="walk-kicker">Surface 03 · Sequence Library</p>
+              <h3>Find and reopen saved work</h3>
+              <p class="walk-goal">Goal: browse sequences and deep-link back into the builder</p>
               <p>
-                Sequences start in the builder (sections, pose instances, group blocks, drag reorder, duration).
-                Saved work lands in the Sequence Library; poses and variations live as first-class objects in the
-                Pose Library (50+ catalog). When an instructor is ready, public sequence URLs and profile pages
-                carry the work outside the account — a deep link should deepen into a profile and schedule, not dead-end.
-              </p>
-              <p style="display:flex;flex-wrap:wrap;gap:0.45rem;margin-top:0.75rem;">
-                <span style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 0.55rem;border:1px solid var(--line);color:var(--ink-soft);">Builder</span>
-                <span style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 0.55rem;border:1px solid var(--line);color:var(--ink-soft);">Pose library</span>
-                <span style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 0.55rem;border:1px solid var(--line);color:var(--ink-soft);">Sequence library</span>
-                <span style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 0.55rem;border:1px solid var(--line);color:var(--ink-soft);">Public share</span>
-                <span style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 0.55rem;border:1px solid var(--line);color:var(--ink-soft);">Profile + schedule</span>
+                Finished plans land in the Sequence Library so instructors can return to last week’s flow, clone it,
+                or jump straight into edit — not dig through notes and screenshots.
               </p>
             </div>
             <div class="walk-media">
               <p style="margin:0;padding:1.25rem;border:1px dashed var(--line);color:var(--ink-soft);font-size:0.95rem;">
-                Builder → pose library → sequence library → public share URL.
+                Sequence Library — browse, open, and clone saved class plans.
               </p>
             </div>
           </div>
 
           <div class="walk-step walk-step--flip">
             <div class="walk-copy">
-              <p class="walk-kicker">Surface 04</p>
-              <h3>Admin & permissions as ops</h3>
-              <p class="walk-goal">Goal: multi-instructor orgs without spreadsheet access control</p>
+              <p class="walk-kicker">Surface 04 · Public Sequence</p>
+              <h3>Teach on a timer from a share link</h3>
+              <p class="walk-goal">Goal: run the class from a public sequence URL</p>
               <p>
-                Admin search, ban/unban, and five permission scopes keep instructor and admin tooling in one product.
-                That was ops readiness for studios and multi-instructor orgs — who can edit libraries, who can publish,
-                who gets cut off — before the user base outgrew a single owner account.
+                When a sequence is ready, a shareable URL turns the plan into a live runner: start, pause, and advance
+                while each pose’s clock runs — so teaching stays on the floor, not split across a spreadsheet and a phone timer.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block" style="margin:0">
+                <img src="../assets/sculpt/runner.gif" alt="Sculpt Architect sequence runner" />
+                <figcaption>Public sequence runner — start / pause with live pose progress</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 05 · Public Profile + Schedule</p>
+              <h3>Carry the brand past a single sequence</h3>
+              <p class="walk-goal">Goal: a public profile with schedule, not a dead-end share link</p>
+              <p>
+                Profile pages sit next to sequence URLs so a deep link can deepen into who teaches, when they teach,
+                and how to find more of their work — without standing up a separate site.
               </p>
             </div>
             <div class="walk-media">
               <p style="margin:0;padding:1.25rem;border:1px dashed var(--line);color:var(--ink-soft);font-size:0.95rem;">
-                Role flags on JWT-backed accounts: five toggles plus ban controls so access doesn’t live in a side spreadsheet.
+                Public profile + editable schedule alongside shareable sequence URLs.
+              </p>
+            </div>
+          </div>
+
+          <div class="walk-step walk-step--flip">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 06 · Admin</p>
+              <h3>Permissions without a side spreadsheet</h3>
+              <p class="walk-goal">Goal: multi-instructor control in one product</p>
+              <p>
+                Admin search, ban/unban, and five permission scopes keep instructor and admin tooling together —
+                who can edit libraries, who can publish, who gets cut off — before the user base outgrows a single owner account.
+              </p>
+            </div>
+            <div class="walk-media">
+              <p style="margin:0;padding:1.25rem;border:1px dashed var(--line);color:var(--ink-soft);font-size:0.95rem;">
+                Five role toggles plus ban controls on JWT-backed accounts.
               </p>
             </div>
           </div>
