@@ -214,6 +214,73 @@ a:hover { color: var(--signal-deep); }
   width: min(1120px, calc(100% - 2.5rem));
   margin-inline: auto;
 }
+.case-hero--with-cutout {
+  min-height: min(88svh, 860px);
+}
+.case-hero--with-cutout .case-hero-media::after {
+  background:
+    linear-gradient(180deg, rgba(8, 12, 18, 0.12) 0%, rgba(8, 12, 18, 0.05) 40%, rgba(8, 12, 18, 0.55) 100%),
+    linear-gradient(90deg, rgba(8, 12, 18, 0.55) 0%, rgba(8, 12, 18, 0.25) 42%, transparent 72%);
+}
+.case-hero-cutout {
+  position: absolute;
+  inset: 0 0 0 auto;
+  width: min(58%, 680px);
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1.5rem 1rem 0 0;
+  pointer-events: none;
+}
+.case-hero-cutout img {
+  width: 100%;
+  height: auto;
+  max-height: min(92%, 780px);
+  object-fit: contain;
+  object-position: right bottom;
+  filter: drop-shadow(0 18px 36px rgba(0, 0, 0, 0.4));
+}
+.case-hero--with-cutout .case-hero-content {
+  z-index: 2;
+  max-width: min(34rem, 48%);
+  margin-inline: max(1.25rem, calc((100% - 1120px) / 2 + 1.25rem)) auto;
+  width: auto;
+  padding-right: 1rem;
+}
+@media (max-width: 880px) {
+  .case-hero--with-cutout {
+    min-height: auto;
+  }
+  .case-hero-cutout {
+    position: relative;
+    width: min(100%, 420px);
+    margin: 1.5rem auto 0;
+    padding: 0 1rem;
+    inset: auto;
+    justify-content: center;
+  }
+  .case-hero-cutout img {
+    max-height: 380px;
+    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.35));
+  }
+  .case-hero--with-cutout .case-hero-content {
+    max-width: none;
+    width: min(1120px, calc(100% - 2.5rem));
+    margin-inline: auto;
+    padding: 4.5rem 0 1.25rem;
+    order: 0;
+  }
+  .case-hero--with-cutout {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .case-hero--with-cutout .case-hero-cutout {
+    order: 1;
+    margin: 0.5rem auto 1.5rem;
+  }
+}
 .case-hero .crumb {
   font-family: var(--font-mono);
   font-size: 0.7rem;
