@@ -1,4 +1,4 @@
-/* Mini sequence playthrough for Sculpt case study */
+/* Mini sequence playthrough for Sculpt Architect case study */
 (function () {
   const SEQUENCE = [
     { name: "Child's Pose", sec: 45, cue: "Settle the breath. Soften the hips back." },
@@ -19,7 +19,7 @@
 
     root.innerHTML = `
       <div class="seq-demo-title">Morning Flow — playthrough</div>
-      <p class="seq-demo-sub">Mini demo of Sculpt’s timed class runner</p>
+      <p class="seq-demo-sub">Mini demo of Sculpt Architect’s timed class runner</p>
       <div class="seq-now">
         <div class="seq-pose-art" data-art>1</div>
         <div>
