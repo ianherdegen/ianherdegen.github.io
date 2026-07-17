@@ -232,10 +232,10 @@
               </p>
             </div>
             <div class="walk-media">
-              <div class="showcase showcase-light">
-                <div class="showcase-bar"><span>Sequence runner</span><a href="https://github.com/ianherdegen/Sculpt-Architect" target="_blank" rel="noopener">View repo</a></div>
-                <div class="seq-demo" data-sequence-demo></div>
-              </div>
+              <figure class="media-block" style="margin:0">
+                <img src="../assets/sculpt/runner.jpg" alt="Sculpt Architect sequence runner — Balance & Stability with play controls and timing" />
+                <figcaption>Sequence runner — play, reset, speed, and live progress on the clock</figcaption>
+              </figure>
             </div>
           </div>
 
@@ -346,7 +346,6 @@
     </div>
   </main>
 
-  <script src="../js/sequence-playthrough.js"></script>
   <script>
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
