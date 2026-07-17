@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+  <rect width="1400" height="900" fill="#12151a"/>
+  <rect x="24" y="24" width="360" height="852" rx="0" fill="#1a1f28"/>
+  <text x="48" y="72" fill="#f7f8fa" font-family="Helvetica,Arial,sans-serif" font-size="28" font-weight="700">Airship gore pattern</text>
+  <text x="48" y="104" fill="#8b93a1" font-family="Helvetica,Arial,sans-serif" font-size="14">Parameterize hull · export PDF panels</text>
+  <text x="48" y="160" fill="#a8b0bc" font-family="Helvetica,Arial,sans-serif" font-size="12">PAPER WIDTH</text>
+  <rect x="48" y="172" width="280" height="10" fill="#2a3140"/>
+  <rect x="48" y="172" width="180" height="10" fill="#c45c26"/>
+  <text x="48" y="220" fill="#a8b0bc" font-family="Helvetica,Arial,sans-serif" font-size="12">GORE COUNT · 10</text>
+  <text x="48" y="260" fill="#a8b0bc" font-family="Helvetica,Arial,sans-serif" font-size="12">MIDDLE CYLINDER</text>
+  <rect x="48" y="272" width="280" height="10" fill="#2a3140"/>
+  <rect x="48" y="272" width="200" height="10" fill="#c45c26"/>
+  <text x="48" y="320" fill="#a8b0bc" font-family="Helvetica,Arial,sans-serif" font-size="12">NOSE CAP</text>
+  <rect x="48" y="332" width="280" height="10" fill="#2a3140"/>
+  <rect x="48" y="332" width="90" height="10" fill="#c45c26"/>
+  <rect x="48" y="400" width="280" height="44" fill="#c45c26"/>
+  <text x="188" y="428" text-anchor="middle" fill="#fff" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="700">Download letter PDF</text>
+  <!-- 3D-ish hull -->
+  <ellipse cx="900" cy="450" rx="280" ry="120" fill="none" stroke="#506E82" stroke-width="2"/>
+  <ellipse cx="900" cy="450" rx="220" ry="95" fill="none" stroke="#F43F5E" stroke-width="1.5" opacity="0.7"/>
+  <path d="M620,450 Q900,280 1180,450 Q900,620 620,450" fill="none" stroke="#e8ecf0" stroke-width="2"/>
+  <!-- gore strips -->
+  <g stroke="#7dd3c7" stroke-width="1.2" fill="none" opacity="0.85">
+    <path d="M760,340 C780,400 780,500 760,560"/>
+    <path d="M820,320 C845,400 845,500 820,580"/>
+    <path d="M880,310 C910,400 910,500 880,590"/>
+    <path d="M940,320 C965,400 965,500 940,580"/>
+    <path d="M1000,340 C1020,400 1020,500 1000,560"/>
+  </g>
+  <text x="900" y="720" text-anchor="middle" fill="#8b93a1" font-family="Helvetica,Arial,sans-serif" font-size="13">Live 3D preview · printable gores for venue props</text>
+</svg>

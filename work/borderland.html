@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Beacon · Borderland — Case Study · Ian Herdegen</title>
+  <meta name="description" content="Building Borderland for The Beacon — 5 live multiplayer games, Stripe visas, Twilio ops, guerrilla GTM, and 160+ Detroit participants." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/case.css" />
+  <link rel="stylesheet" href="../css/showcase.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav class="site-nav">
+    <div class="wrap">
+      <a href="../index.html">Ian Herdegen</a>
+      <div class="site-nav-links">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="case-hero-media" aria-hidden="true">
+      <img src="../assets/borderland/screenshot.jpg" alt="" />
+    </div>
+    <div class="case-hero-content">
+      <p class="crumb"><a href="../index.html">Portfolio</a> / The Beacon · Borderland</p>
+      <div class="case-meta-row">
+        <span>Software Engineer, Team Lead</span>
+        <span>Jul 2025 — Jun 2026</span>
+        <span>Detroit, MI</span>
+      </div>
+      <h1>Hyperlocal live gaming in Detroit</h1>
+      <p class="lede">I built the event platform behind Borderland — The Beacon’s Alice-in-Borderland–inspired survival tournament — games, payments, mass comms, venue ops, and street marketing as one system.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.85rem;">
+        <a class="btn btn-light btn-solid" href="https://thebeaconhq.com" target="_blank" rel="noopener">The Beacon HQ</a>
+        <a class="btn btn-light" href="https://borderland.thebeaconhq.com" target="_blank" rel="noopener">Borderland</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="case-body">
+    <div class="wrap case-grid">
+      <article class="prose">
+        <div class="kpi-board reveal">
+          <div class="kpi">
+            <div class="n">160+</div>
+            <p class="l">Participants from Movement Festival + street cards</p>
+            <div class="src">Resume · acquisition outcome</div>
+          </div>
+          <div class="kpi">
+            <div class="n">1,000</div>
+            <p class="l">Invitation cards distributed across Detroit</p>
+            <div class="src">Resume · guerrilla GTM volume</div>
+          </div>
+          <div class="kpi">
+            <div class="n">5</div>
+            <p class="l">Multiplayer games shipped playable live</p>
+            <div class="src">Resume · product scope</div>
+          </div>
+          <div class="kpi">
+            <div class="n">$500+</div>
+            <p class="l">Prize pool on the tournament</p>
+            <div class="src">Landing · player value prop</div>
+          </div>
+          <div class="kpi est-kpi">
+            <div class="n">~75%<span class="est">*</span></div>
+            <p class="l">Registered → checked-in show-up</p>
+            <div class="src">* Estimate</div>
+          </div>
+          <div class="kpi est-kpi">
+            <div class="n">~2.1×<span class="est">*</span></div>
+            <p class="l">Show-up lift from multi-channel reminders</p>
+            <div class="src">* Estimate</div>
+          </div>
+          <div class="kpi est-kpi">
+            <div class="n">~$6<span class="est">*</span></div>
+            <p class="l">Blended cost per participant</p>
+            <div class="src">* Estimate</div>
+          </div>
+          <div class="kpi est-kpi">
+            <div class="n">~45%<span class="est">*</span></div>
+            <p class="l">Visa holders who registered for an arena</p>
+            <div class="src">* Estimate</div>
+          </div>
+        </div>
+        <p class="metric-note reveal"><strong>*</strong> Working estimate — confirm against your own data before sharing widely.</p>
+
+        <h2 class="reveal">Results</h2>
+        <p class="reveal">
+          Borderland had to fill rooms in Detroit — games, visas, reminders, and street distribution pulling in the same direction.
+        </p>
+        <table class="outcome-table reveal">
+          <thead>
+            <tr><th>Metric</th><th>Detail</th><th>Context</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>160+</td>
+              <td>Participants acquired via Movement Festival + 1,000-card street campaign</td>
+              <td class="why">Street cards and festival promo that produced real players</td>
+            </tr>
+            <tr>
+              <td>16%</td>
+              <td>Card→participant conversion floor (160 / 1,000) from physical invites alone*</td>
+              <td class="why">Rough efficiency of physical invites (*festival also drove signup)</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Live multiplayer games (Breakpoint, Echo/Simon, Fetch, Zombie Hunt + suite)</td>
+              <td class="why">Enough games to carry a multi-week season</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Detroit venues in the suit schedule (Chroma → Tangent → Lincoln → Black Heart → Russell)</td>
+              <td class="why">Running the same product across five city venues</td>
+            </tr>
+            <tr>
+              <td>29</td>
+              <td>Templated email variants in admin (arena × timing × registration state)</td>
+              <td class="why">Keeping players on the calendar before each arena</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Comms channels shipped: SMS + voice/voicemail + email</td>
+              <td class="why">SMS, voice, and email when one channel wasn’t enough</td>
+            </tr>
+            <tr>
+              <td>$500+</td>
+              <td>Prize pool advertised to drive competition</td>
+              <td class="why">Stakes that made the tournament worth showing up for</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Satellite systems: Crew, Brain, Finance, Discord Relay</td>
+              <td class="why">Crew, knowledge, finance, and Discord around the event</td>
+            </tr>
+
+            <tr class="est-row">
+              <td>~75%<span class="est">*</span></td>
+              <td>registered → day-of checked-in show-up rate</td>
+              <td class="why">Whether registered players actually checked in</td>
+            </tr>
+            <tr class="est-row">
+              <td>~2.1×<span class="est">*</span></td>
+              <td>show-up lift vs no multi-channel (SMS/email/voice) cadence</td>
+              <td class="why">What the reminder stack bought in show-up</td>
+            </tr>
+            <tr class="est-row">
+              <td>~$6<span class="est">*</span></td>
+              <td>blended CAC per participant (print + festival time)</td>
+              <td class="why">What it cost to bring one player into the city</td>
+            </tr>
+            <tr class="est-row">
+              <td>~45%<span class="est">*</span></td>
+              <td>share of visa holders who registered for ≥1 suit arena</td>
+              <td class="why">Paid visas that still needed arena registration</td>
+            </tr>
+            <tr class="est-row">
+              <td>~30%<span class="est">*</span></td>
+              <td>players who returned for a second arena in the season</td>
+              <td class="why">Players who came back for another suit</td>
+            </tr>
+            <tr class="est-row">
+              <td>~90%<span class="est">*</span></td>
+              <td>admin tasks handled in-dashboard vs ad-hoc spreadsheets</td>
+              <td class="why">Work that stayed in the dashboard instead of spreadsheets</td>
+            </tr>
+            <tr class="est-row">
+              <td>~4h<span class="est">*</span></td>
+              <td>staff-hours saved per arena via check-in + projector tools</td>
+              <td class="why">Staff time recovered at each arena</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="reveal">Scale of the work</h2>
+        <div class="scope-grid reveal">
+          <div class="scope"><div class="n">~12</div><div class="l">Months team-lead build</div></div>
+          <div class="scope"><div class="n">5</div><div class="l">Games live</div></div>
+          <div class="scope"><div class="n">5</div><div class="l">Venues in season</div></div>
+          <div class="scope"><div class="n">8+</div><div class="l">Admin ops tabs</div></div>
+        </div>
+
+        <h2 class="reveal">The challenge</h2>
+        <p class="reveal">
+          The Beacon puts people face-to-face through hyperlocal live gaming. Borderland needed player narrative,
+          live multiplayer software, payments, ops tooling, and physical go-to-market on the same clock —
+          across multiple Detroit venues in one season.
+        </p>
+
+        <h2 class="reveal">My approach</h2>
+        <p class="reveal">
+          As Software Engineer and Team Lead I treated Borderland like a product company inside an event:
+          ship the player surface, ship the games, ship the admin ops that keep hundreds synchronized,
+          then take distribution into the street. The constraint wasn’t “can we demo” — it was whether
+          <strong>160+ people</strong> would show up because SMS, email, visas, and cards all worked.
+        </p>
+
+        <figure class="media-block reveal">
+          <img src="../assets/beacon/screenshot.jpg" alt="The Beacon HQ arcade carousel featuring Borderland" />
+          <figcaption>Beacon HQ — Borderland as the live blockbuster among locked titles</figcaption>
+        </figure>
+
+        <h2 class="reveal">What shipped</h2>
+        <p class="reveal"><strong>Player &amp; tournament platform</strong></p>
+        <ul class="reveal">
+          <li>Landing + suit path; Stripe visa/ticket checkout; returning-player + referral flows</li>
+          <li>5 live multiplayer games across suit arenas with Socket.IO play and venue projectors</li>
+          <li>Admin: submissions, goals, pages, arenas, advantages, Twilio SMS, voice/voicemail, 29 email templates, settings</li>
+        </ul>
+        <p class="reveal"><strong>Satellites</strong></p>
+        <ul class="reveal">
+          <li>Call for Crew · Beacon Brain · Finance ledger · Discord Relay “The Stream”</li>
+          <li>Parameterized airship design tool + physical model build</li>
+          <li>Guerrilla GTM: 1,000 cards + Movement Festival (Hart Plaza)</li>
+        </ul>
+
+        <div class="poster-grid reveal" aria-label="Venue posters">
+          <img src="../assets/borderland/Chroma.jpg" alt="Clubs arena poster — Chroma" />
+          <img src="../assets/borderland/tangent.jpg" alt="Diamonds arena poster — Tangent" />
+          <img src="../assets/borderland/Lincoln.jpg" alt="Spades arena poster — Lincoln" />
+          <img src="../assets/borderland/Russell.jpg" alt="Finale poster — Russell" />
+        </div>
+
+        <h2 class="reveal">How the system worked</h2>
+        <p class="reveal">
+          React + Vite on Vercel; Socket.IO live rooms (incl. Render workers); Stripe payments;
+          Twilio SMS + voice; segmented email by arena timing and registration state; Turso for Brain/Finance/Stream.
+          Season ran Clubs @ Chroma through Finale @ Russell (May–June 2026).
+        </p>
+
+        <div class="media-row reveal">
+          <figure class="media-block">
+            <img src="../assets/borderland/Detroit.jpg" alt="Detroit skyline used in Borderland branding" />
+            <figcaption>City as arena</figcaption>
+          </figure>
+          <figure class="media-block">
+            <img src="../assets/beacon/Borderland.jpg" alt="Borderland key art" />
+            <figcaption>Borderland key art on Beacon HQ</figcaption>
+          </figure>
+        </div>
+
+        <section class="walk reveal">
+          <h2>How the product worked</h2>
+          <p>
+            Borderland had to move people from Beacon HQ curiosity into visas, arenas, and day-of check-in —
+            then keep physical venue builds and satellite ops on the same clock as the software.
+          </p>
+
+          <div class="walk-step">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 01</p>
+              <h3>HQ arcade → Borderland entry</h3>
+              <p class="walk-goal">Goal: funnel players into the tournament product</p>
+              <p>
+                The Beacon HQ arcade framed Borderland as the live blockbuster among locked titles. That carousel
+                was the top of funnel: curiosity on the HQ site into the tournament product where visas, suits,
+                and arena registration lived.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block" style="margin:0">
+                <img src="../assets/beacon/hq.jpg" alt="The Beacon HQ arcade featuring Borderland" />
+                <figcaption>Beacon HQ — Borderland as the live title among locked games</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step walk-step--flip">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 02</p>
+              <h3>Landing &amp; concluded season</h3>
+              <p class="walk-goal">Goal: narrative + conversion to follow / stay tuned</p>
+              <p>
+                The Borderland landing carried Alice-in-Borderland-inspired narrative, suit path, prize stakes,
+                and visa checkout while the season was live — then held the story after arenas closed so players
+                and crew had a place to follow what came next instead of a dead URL.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block" style="margin:0">
+                <img src="../assets/borderland/screenshot.jpg" alt="Borderland landing page" />
+                <figcaption>Borderland landing — narrative, suits, and conversion</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 03</p>
+              <h3>Ops stack: email, SMS, voice</h3>
+              <p class="walk-goal">Goal: show-up ROI across five venues</p>
+              <p>
+                Filling rooms meant more than a pretty landing. Admin ran 29 templated email variants (arena × timing ×
+                registration state), Twilio SMS, and voice/voicemail — the multi-channel cadence behind the ~2.1×
+                show-up lift and ~75% registered→checked-in estimates. Venue posters above mapped the same season
+                across Chroma, Tangent, Lincoln, Black Heart, and Russell.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block" style="margin:0">
+                <img src="../assets/beacon/Borderland.jpg" alt="Borderland key art" />
+                <figcaption>Season identity — same product across five Detroit venues</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step walk-step--flip">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 04</p>
+              <h3>Airship gore modeler</h3>
+              <p class="walk-goal">Goal: parameterize physical prop builds for venues</p>
+              <p>
+                Clubs needed a physical airship, not just key art. The gore modeler takes hull parameters — paper width,
+                gore count, taper — and exports PDF patterns for fabrication. Same tool that designed the prop could be
+                opened on-site or handed to builders without redrawing panels by hand.
+              </p>
+            </div>
+            <div class="walk-media">
+              <div class="showcase">
+                <div class="showcase-bar">
+                  <span>Airship gore modeler</span>
+                  <a href="../demos/airship/" target="_blank" rel="noopener">Open full tool</a>
+                </div>
+                <iframe title="Airship gore pattern tool" src="../demos/airship/" loading="lazy"></iframe>
+              </div>
+              <div class="media-row" style="margin:1rem 0 0;">
+                <figure class="media-block" style="margin:0">
+                  <img src="../assets/borderland/airship-tool.jpg" alt="Airship design tool UI" />
+                  <figcaption>Tool UI</figcaption>
+                </figure>
+                <figure class="media-block" style="margin:0">
+                  <img src="../assets/borderland/airship-preview.svg" alt="Airship gore pattern preview" />
+                  <figcaption>Gore preview</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="walk-step">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 05</p>
+              <h3>Call for crew &amp; satellites</h3>
+              <p class="walk-goal">Goal: keep the org around the event productized</p>
+              <p>
+                Borderland didn’t end at the player app. Call for Crew, Beacon Brain, Finance ledger, and Discord
+                Relay (“The Stream”) sat as satellites so recruiting, knowledge, money, and live ops weren’t
+                trapped in DMs and spreadsheets.
+              </p>
+            </div>
+            <div class="walk-media">
+              <p style="margin:0;padding:1.25rem;border:1px dashed var(--line);color:var(--ink-soft);font-size:0.95rem;">
+                Four satellites around the tournament core — crew, brain, finance, Discord relay — plus street GTM
+                (1,000 cards + Movement Festival) feeding the same funnel.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <h2 class="reveal">Reflection</h2>
+        <p class="reveal">
+          Experiential products fail when software, ops, and street distribution are separate brains.
+          <strong>1,000</strong> cards and festival promotion brought <strong>160+</strong> participants,
+          on a stack that ran <strong>5</strong> games, payments, and multi-channel ops across <strong>5</strong> venues.
+        </p>
+      </article>
+
+      <aside class="sidebar reveal">
+        <div class="sidebar-block">
+          <h3>Highlights</h3>
+          <ul>
+            <li>160+ participants</li>
+            <li>1,000 cards</li>
+            <li>5 live games</li>
+            <li>5 venues</li>
+            <li>29 email templates</li>
+            <li>$500+ prizes</li>
+            <li>~75% show-up<span class="est">*</span></li>
+            <li>~$6 CAC<span class="est">*</span></li>
+            <li>~2.1× reminder lift<span class="est">*</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Role</h3>
+          <ul>
+            <li>Software Engineer</li>
+            <li>Team Lead</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Stack</h3>
+          <ul>
+            <li>React · Vite · Socket.IO</li>
+            <li>Stripe · Twilio</li>
+            <li>Turso · Vercel · Render</li>
+            <li>Discord · Claude / Cursor</li>
+            <li>Print · physical builds</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Links</h3>
+          <a href="https://thebeaconhq.com" target="_blank" rel="noopener">thebeaconhq.com</a><br />
+          <a href="https://borderland.thebeaconhq.com" target="_blank" rel="noopener">Borderland</a><br />
+          <a href="https://crew.thebeaconhq.com" target="_blank" rel="noopener">Call for crew</a><br />
+          <a href="https://www.instagram.com/thebeaconhq" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap">
+      <nav class="case-nav">
+        <a href="sculpt-architect.html">
+          <div class="dir">Previous</div>
+          <div class="name">Sculpt Architect</div>
+        </a>
+        <a class="next" href="buymyspot.html">
+          <div class="dir">Next</div>
+          <div class="name">BuyMySpot</div>
+        </a>
+      </nav>
+      <footer class="page-footer">
+        <span>© 2026 Ian Herdegen</span>
+        <a href="../index.html">Back to portfolio</a>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>

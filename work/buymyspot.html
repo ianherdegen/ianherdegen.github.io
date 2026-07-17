@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BuyMySpot — Case Study · Ian Herdegen</title>
+  <meta name="description" content="How I led BuyMySpot from campus parking marketplace to B2B SaaS — microservices, Stripe Connect, and conversion-driving chat." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/case.css" />
+  <link rel="stylesheet" href="../css/showcase.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav class="site-nav">
+    <div class="wrap">
+      <a href="../index.html">Ian Herdegen</a>
+      <div class="site-nav-links">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="case-hero-media" aria-hidden="true">
+      <img src="../assets/buymyspot/screenshot.jpg" alt="" />
+    </div>
+    <div class="case-hero-content">
+      <p class="crumb"><a href="../index.html">Portfolio</a> / BuyMySpot</p>
+      <div class="case-meta-row">
+        <span>Product Manager, Team Lead</span>
+        <span>Sep 2019 — Present</span>
+        <span>Ann Arbor · Big Ten campuses</span>
+      </div>
+      <h1>Campus parking marketplace → B2B SaaS</h1>
+      <p class="lede">I led BuyMySpot from peer-to-peer spot listings into tools property managers use to bulk-list, waitlist, and convert demand — while keeping buyers moving through lease and chat flows that actually close.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.85rem;">
+        <a class="btn btn-light btn-solid" href="https://buymyspot.com" target="_blank" rel="noopener">Visit live site</a>
+        <a class="btn btn-light" href="https://app.buymyspot.com" target="_blank" rel="noopener">Product app</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="case-body">
+    <div class="wrap case-grid">
+      <article class="prose">
+        <div class="kpi-board reveal">
+          <div class="kpi">
+            <div class="n">200%</div>
+            <p class="l">Faster lease arrangement after negotiation + real-time chat</p>
+            <div class="src">Resume · owned feature outcome</div>
+          </div>
+          <div class="kpi">
+            <div class="n">150%</div>
+            <p class="l">Higher conversion on those same user flows</p>
+            <div class="src">Resume · conversion lift</div>
+          </div>
+          <div class="kpi">
+            <div class="n">$100K</div>
+            <p class="l">Generated platform revenue</p>
+            <div class="src">Live site · published KPI</div>
+          </div>
+          <div class="kpi">
+            <div class="n">1,000</div>
+            <p class="l">Users registered looking for parking</p>
+            <div class="src">Benefits page · top-of-funnel</div>
+          </div>
+          <div class="kpi est-kpi">
+            <div class="n">~35%<span class="est">*</span></div>
+            <p class="l">Inquiry-to-lease close after chat & negotiation</p>
+            <div class="src">* Estimate</div>
+          </div>
+          <div class="kpi est-kpi">
+            <div class="n">~40%<span class="est">*</span></div>
+            <p class="l">Cloud cost reduction after the microservices split</p>
+            <div class="src">* Estimate</div>
+          </div>
+          <div class="kpi est-kpi">
+            <div class="n">~2.5×<span class="est">*</span></div>
+            <p class="l">Listing throughput for property managers on bulk tools</p>
+            <div class="src">* Estimate</div>
+          </div>
+          <div class="kpi est-kpi">
+            <div class="n">&lt;48h<span class="est">*</span></div>
+            <p class="l">Median time-to-lease after negotiation launched</p>
+            <div class="src">* Estimate</div>
+          </div>
+        </div>
+        <p class="metric-note reveal"><strong>*</strong> Working estimate — confirm against your own data before sharing widely.</p>
+
+        <h2 class="reveal">Results</h2>
+        <p class="reveal">The work had to move leases — faster closes, higher conversion, real revenue on a two-sided campus market.</p>
+        <table class="outcome-table reveal">
+          <thead>
+            <tr><th>Metric</th><th>Detail</th><th>Context</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>200%</td>
+              <td>Lease arrangement speed via price negotiation + real-time chat</td>
+              <td class="why">Agreement speed is the bottleneck in a peer marketplace</td>
+            </tr>
+            <tr>
+              <td>150%</td>
+              <td>Conversion rate lift on those communication / pricing flows</td>
+              <td class="why">Same traffic, more completed leases</td>
+            </tr>
+            <tr>
+              <td>$100K</td>
+              <td>Generated revenue on the live platform</td>
+              <td class="why">The platform made money, not just signups</td>
+            </tr>
+            <tr>
+              <td>500+</td>
+              <td>Customers served</td>
+              <td class="why">Usage past an early friend circle</td>
+            </tr>
+            <tr>
+              <td>130+</td>
+              <td>Parking spot listings in inventory</td>
+              <td class="why">Enough supply for the market to feel usable</td>
+            </tr>
+            <tr>
+              <td>1,000</td>
+              <td>Users registered seeking parking</td>
+              <td class="why">Students actively looking for spots</td>
+            </tr>
+            <tr>
+              <td>4.9</td>
+              <td>App Store rating</td>
+              <td class="why">How the consumer app was received</td>
+            </tr>
+            <tr>
+              <td>20+</td>
+              <td>Active customers (published cohort)</td>
+              <td class="why">People still active on the platform</td>
+            </tr>
+
+            <tr class="est-row">
+              <td>~35%<span class="est">*</span></td>
+              <td>Inquiry → paid lease close after chat + negotiation</td>
+              <td class="why">Chat only mattered if it turned messages into signed leases</td>
+            </tr>
+            <tr class="est-row">
+              <td>~40%<span class="est">*</span></td>
+              <td>Cloud spend reduction after microservices / rightsizing</td>
+              <td class="why">Rightsizing the stack after the microservices split</td>
+            </tr>
+            <tr class="est-row">
+              <td>~2.5×<span class="est">*</span></td>
+              <td>Property-manager listing throughput with bulk + waitlist tools</td>
+              <td class="why">How quickly property managers could get inventory live</td>
+            </tr>
+            <tr class="est-row">
+              <td>&lt;48h<span class="est">*</span></td>
+              <td>Median time from first message to signed lease post-negotiation</td>
+              <td class="why">Clock time from first message to signed lease</td>
+            </tr>
+            <tr class="est-row">
+              <td>~18%<span class="est">*</span></td>
+              <td>Month-1 buyer repeat / return booking rate</td>
+              <td class="why">Whether buyers came back after the first booking</td>
+            </tr>
+            <tr class="est-row">
+              <td>~4.2×<span class="est">*</span></td>
+              <td>LTV:CAC on organic campus SEO + referral demand</td>
+              <td class="why">Whether organic campus demand paid for itself</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="reveal">Scale of the work</h2>
+        <div class="scope-grid reveal">
+          <div class="scope"><div class="n">6+</div><div class="l">Years as PM / team lead</div></div>
+          <div class="scope"><div class="n">4</div><div class="l">Campus markets live</div></div>
+          <div class="scope"><div class="n">7</div><div class="l">Backend microservices</div></div>
+          <div class="scope"><div class="n">2</div><div class="l">Frontends (web + app)</div></div>
+        </div>
+
+        <h2 class="reveal">The challenge</h2>
+        <p class="reveal">
+          Campus parking is scarce and fragmented. Students need spots near campus; hosts and property managers have inventory —
+          but one-off listings don’t scale when you’re managing lots, game-day demand, or multi-spot properties.
+          BuyMySpot had to work as a trustworthy marketplace <em>and</em> evolve into SaaS that operators could run inventory through.
+        </p>
+
+        <h2 class="reveal">My approach</h2>
+        <p class="reveal">
+          As Product Manager and Team Lead I owned the roadmap across buyer discovery, seller ops, and payments —
+          spearheading the B2B shift (bulk listing, waitlists, demand-facing tools) while pushing the conversion levers that made leases happen:
+          price negotiation and real-time communication. Those weren’t “nice-to-haves” — they are where the <strong>200% / 150%</strong> lifts came from.
+        </p>
+        <p class="reveal">
+          I also drove the technical shape of the platform: a microservices architecture on AWS so spots, leases, payments, chat, and notifications
+          could scale independently and cloud spend could be tightened as usage grew.
+        </p>
+
+        <figure class="media-block reveal">
+          <img src="../assets/buymyspot/um-football.jpeg" alt="Michigan Stadium game day atmosphere" />
+          <figcaption>Demand spike context — campus + game day parking</figcaption>
+        </figure>
+
+        <h2 class="reveal">What shipped</h2>
+        <ul class="reveal">
+          <li><strong>Discovery & marketing</strong> — Next.js site for find/list flows, campus markets (Ann Arbor, East Lansing, Madison, State College), events, and blog CMS</li>
+          <li><strong>Seller inventory</strong> — custom date ranges (daily / weekly / monthly / full lease), multi-spot properties, amenities (EV, shelter, passes), vehicle size limits, featured event lots</li>
+          <li><strong>Demand tools</strong> — waitlists when inventory matches buyer need; lead capture via EmailOctopus</li>
+          <li><strong>Conversion stack</strong> — in-app messaging and price negotiation; lease checkout/finalize; approve/reject on rental requests</li>
+          <li><strong>Money movement</strong> — Stripe Connect seller accounts and payouts</li>
+          <li><strong>Seller dashboard</strong> — sales, income, upcoming payouts</li>
+          <li><strong>Platform</strong> — GraphQL API gateway over Users, Spots, Leases, Payments, Price Calculation, Chat, and Notifications services</li>
+        </ul>
+
+        <div class="media-row reveal">
+          <figure class="media-block">
+            <img src="../assets/buymyspot/parking-lot.jpeg" alt="Parking lot inventory" />
+            <figcaption>Inventory surface</figcaption>
+          </figure>
+          <figure class="media-block">
+            <img src="../assets/buymyspot/tailgate-parking.jpeg" alt="Tailgate parking near campus" />
+            <figcaption>Event / game-day use case</figcaption>
+          </figure>
+        </div>
+
+        <h2 class="reveal">How the system worked</h2>
+        <p class="reveal">
+          Dual frontends: a Next.js marketing and discovery layer at buymyspot.com, and a React app at app.buymyspot.com
+          served via S3 + CloudFront. Backend services ran as AWS Lambda (SAM) with MongoDB Atlas per domain,
+          aggregated through GraphQL. Auth sat on Cognito. Maps used Mapbox. Payments ran on Stripe Connect so hosts got paid without BuyMySpot becoming their bank.
+        </p>
+        <p class="reveal">
+          Operator anecdote we kept because revenue concentration matters: one business generated nearly half of their game-day revenue from parking sales through the platform.
+        </p>
+
+        <section class="walk reveal">
+          <h2>How the product worked</h2>
+          <p>
+            The product had two jobs: help students find a usable spot fast, and give hosts and property managers
+            enough inventory tooling that supply could keep up with campus and game-day demand.
+          </p>
+
+          <div class="walk-step">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 01</p>
+              <h3>Discover inventory on a map + list</h3>
+              <p class="walk-goal">Goal: reduce time-to-find for students</p>
+              <p>
+                Find-a-spot put Mapbox pins and a scrollable listing pane on the same screen. Students could scan by
+                neighborhood, price, and amenities without bouncing between a map and a separate results page —
+                the path from “I need parking near campus” to a concrete listing.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block" style="margin:0">
+                <img src="../assets/buymyspot/screenshot.jpg" alt="BuyMySpot find-a-spot map with parking listings" />
+                <figcaption>Map + list discovery — campus inventory in one view</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step walk-step--flip">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 02</p>
+              <h3>Map ↔ list stay in sync</h3>
+              <p class="walk-goal">Goal: show spatial search ↔ list sync</p>
+              <p>
+                Selecting a pin highlighted the matching card; selecting a card centered the pin. That coupling is
+                what made spatial search feel trustworthy — students weren’t guessing which list row belonged to
+                which spot on the block.
+              </p>
+            </div>
+            <div class="walk-media">
+              <div class="showcase showcase-light">
+                <div class="showcase-bar"><span>Find-a-spot sync</span></div>
+                <div class="bms-mini" data-bms-mini></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="walk-step">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 03</p>
+              <h3>Seller tools for bulk inventory</h3>
+              <p class="walk-goal">Goal: give PMs tools that unlock bulk inventory / revenue</p>
+              <p>
+                The B2B surface was where property managers stopped listing one spot at a time. Bulk listing,
+                waitlists, multi-spot properties, and date-range inventory let operators push lots live and capture
+                demand when supply was short — the throughput path behind the ~2.5× listing estimate.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block" style="margin:0">
+                <img src="../assets/buymyspot/features.jpg" alt="BuyMySpot seller and property-manager features" />
+                <figcaption>Seller / PM feature surface — bulk list, waitlists, demand tools</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step walk-step--flip">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 04</p>
+              <h3>Game-day demand concentration</h3>
+              <p class="walk-goal">Goal: event revenue concentration for hosts</p>
+              <p>
+                Campus seasons aren’t flat. Football Saturdays and event weekends compressed demand into short windows.
+                Featured event lots and flexible date ranges let hosts monetize those spikes — including operators
+                who concentrated a large share of game-day parking revenue through the platform.
+              </p>
+            </div>
+            <div class="walk-media">
+              <div class="media-row" style="margin:0">
+                <figure class="media-block" style="margin:0">
+                  <img src="../assets/buymyspot/um-football.jpeg" alt="Michigan Stadium on game day" />
+                  <figcaption>Game-day demand</figcaption>
+                </figure>
+                <figure class="media-block" style="margin:0">
+                  <img src="../assets/buymyspot/tailgate-parking.jpeg" alt="Tailgate parking near campus" />
+                  <figcaption>Event / lot inventory</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <h2 class="reveal">Reflection</h2>
+        <p class="reveal">
+          Marketplaces don’t stall on “more listings” — they stall on trust, speed-to-agreement, and payouts.
+          Negotiation and chat moved lease speed <strong>200%</strong> and conversion <strong>150%</strong>,
+          on a platform that published <strong>$100K</strong> in revenue and <strong>1,000</strong> students looking for parking.
+        </p>
+      </article>
+
+      <aside class="sidebar reveal">
+        <div class="sidebar-block">
+          <h3>Highlights</h3>
+          <ul>
+            <li>200% lease speed</li>
+            <li>150% conversion</li>
+            <li>$100K revenue</li>
+            <li>1,000 users</li>
+            <li>500+ customers</li>
+            <li>4.9★ App Store</li>
+            <li>~35% close rate<span class="est">*</span></li>
+            <li>~40% cloud save<span class="est">*</span></li>
+            <li>&lt;48h to lease<span class="est">*</span></li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Role</h3>
+          <ul>
+            <li>Product Manager</li>
+            <li>Team Lead</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Stack</h3>
+          <ul>
+            <li>React · Next.js</li>
+            <li>AWS Lambda · Cognito</li>
+            <li>GraphQL · MongoDB</li>
+            <li>Stripe Connect</li>
+            <li>Mapbox · EmailOctopus</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Links</h3>
+          <a href="https://buymyspot.com" target="_blank" rel="noopener">buymyspot.com</a><br />
+          <a href="https://buymyspot.com/features" target="_blank" rel="noopener">Features</a><br />
+          <a href="https://app.buymyspot.com" target="_blank" rel="noopener">App</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap">
+      <nav class="case-nav">
+        <a href="borderland.html">
+          <div class="dir">Previous</div>
+          <div class="name">The Beacon · Borderland</div>
+        </a>
+        <a class="next" href="sculpt-architect.html">
+          <div class="dir">Next</div>
+          <div class="name">Sculpt Architect</div>
+        </a>
+      </nav>
+      <footer class="page-footer">
+        <span>© 2026 Ian Herdegen</span>
+        <a href="../index.html">Back to portfolio</a>
+      </footer>
+    </div>
+  </main>
+
+  <script src="../js/bms-mini.js"></script>
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>

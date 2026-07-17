@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sculpt Architect — Case Study · Ian Herdegen</title>
+  <meta name="description" content="End-to-end product ownership of Sculpt Architect — sequence builder, pose library, public share, and Turso backend." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/case.css" />
+  <link rel="stylesheet" href="../css/showcase.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav class="site-nav">
+    <div class="wrap">
+      <a href="../index.html">Ian Herdegen</a>
+      <div class="site-nav-links">
+        <a href="../index.html#work">Work</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="case-hero">
+    <div class="case-hero-media" aria-hidden="true">
+      <img src="../assets/sculpt/screenshot.jpg" alt="" />
+    </div>
+    <div class="case-hero-content">
+      <p class="crumb"><a href="../index.html">Portfolio</a> / Sculpt Architect</p>
+      <div class="case-meta-row">
+        <span>Product Owner / Builder</span>
+        <span>Instructor SaaS</span>
+        <span>End-to-end ownership</span>
+      </div>
+      <h1>Sequence builder for yoga instructors</h1>
+      <p class="lede">I owned Sculpt Architect end to end — the product instructors use to design class sequences, manage pose libraries, share publicly, and administer access — including the durability migration behind it.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:0.85rem;">
+        <a class="btn btn-light btn-solid" href="https://sculpt-sequences.vercel.app/" target="_blank" rel="noopener">Open live product</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="case-body">
+    <div class="wrap case-grid">
+      <article class="prose">
+        <div class="kpi-board reveal">
+          <div class="kpi">
+            <div class="n">1→prod</div>
+            <p class="l">Solo product ownership from concept to live Vercel SaaS</p>
+            <div class="src">Shipped system · not a prototype</div>
+          </div>
+          <div class="kpi">
+            <div class="n">50+</div>
+            <p class="l">Poses in the product catalog instructors build from</p>
+            <div class="src">Product library scope</div>
+          </div>
+          <div class="kpi">
+            <div class="n">5</div>
+            <p class="l">Admin permission scopes for multi-user control</p>
+            <div class="src">Ops readiness</div>
+          </div>
+          <div class="kpi">
+            <div class="n">6</div>
+            <p class="l">Core product surfaces in the instructor loop</p>
+            <div class="src">Builder → libraries → share → admin</div>
+          </div>
+          <div class="kpi">
+            <div class="n">67%</div>
+            <p class="l">Class prep time cut — 3 hours → 1 hour</p>
+            <div class="src">Before / after class planning</div>
+          </div>
+          <div class="kpi">
+            <div class="n">2h</div>
+            <p class="l">Hours saved per class planned</p>
+            <div class="src">3h baseline → 1h with Sculpt</div>
+          </div>
+          <div class="kpi">
+            <div class="n">2</div>
+            <p class="l">Public share surfaces — sequences + profiles</p>
+            <div class="src">Deep-linkable without a separate site</div>
+          </div>
+        </div>
+
+        <h2 class="reveal">Results</h2>
+        <p class="reveal">
+          Sculpt isn’t a public GMV story yet. The proof is a full product loop that instructors can actually run —
+          build, share, administer — plus the time it aims to give back.
+        </p>
+        <table class="outcome-table reveal">
+          <thead>
+            <tr><th>Metric</th><th>Detail</th><th>Context</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>100%</td>
+              <td>End-to-end ownership: roadmap, UX, API, DB, deploy, admin</td>
+              <td class="why">One owner from concept through production</td>
+            </tr>
+            <tr>
+              <td>Mig.</td>
+              <td>Persistence moved from Supabase toward Turso/libSQL</td>
+              <td class="why">Simpler ops after moving off Supabase toward Turso</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Public share surfaces (sequences + profiles) with deep links</td>
+              <td class="why">Sharing without standing up a separate site</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Role permissions + ban controls in admin</td>
+              <td class="why">Access control before the user base grows</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Core surfaces: Builder, Sequence Library, Pose Library, Public Sequence, Public Profile + Schedule, Admin</td>
+              <td class="why">A full instructor loop, not a single-screen prototype</td>
+            </tr>
+            <tr>
+              <td>50+</td>
+              <td>Pose catalog available for sequence composition</td>
+              <td class="why">Enough poses to build a real class</td>
+            </tr>
+
+            <tr>
+              <td>67%</td>
+              <td>class-prep time cut vs notes/spreadsheets (3h → 1h)</td>
+              <td class="why">Same class, two hours back</td>
+            </tr>
+            <tr>
+              <td>2h</td>
+              <td>hours saved per class sequence built</td>
+              <td class="why">Absolute time returned per class planned</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="reveal">Scale of the work</h2>
+        <div class="scope-grid reveal">
+          <div class="scope"><div class="n">6</div><div class="l">Core product surfaces</div></div>
+          <div class="scope"><div class="n">1</div><div class="l">Person owning ship cycle</div></div>
+          <div class="scope"><div class="n">5</div><div class="l">Admin permission scopes</div></div>
+          <div class="scope"><div class="n">2</div><div class="l">Public share URL types</div></div>
+        </div>
+        <p class="reveal" style="font-size:0.95rem;color:var(--ink-soft);">
+          Core surfaces: Sequence Builder, Sequence Library, Pose Library, Public Sequence, Public Profile + Schedule, Admin.
+        </p>
+
+        <h2 class="reveal">The challenge</h2>
+        <p class="reveal">
+          Instructors plan classes in notes, spreadsheets, or memory. That breaks down when you need reusable pose libraries,
+          variations, timing, shareable sequences, and controlled who-can-edit-what.
+          Sculpt Architect needed to feel like a craft tool while still being a real multi-user SaaS.
+        </p>
+
+        <h2 class="reveal">My approach</h2>
+        <p class="reveal">
+          I owned information architecture, builder UX, auth, permissions, public surfaces, and the backend path —
+          including migrating durability from Supabase toward Turso/libSQL for simpler Vercel operations.
+          The builder carries sections, timed poses, and nested group blocks so instructors can plan a real class — not just a flat list.
+        </p>
+
+        <figure class="media-block reveal">
+          <img src="../assets/sculpt/screenshot.jpg" alt="Sculpt Architect Sequence Builder with sections, poses, and group blocks" />
+          <figcaption>Sequence Builder — sections, timed poses, and nested group blocks (sets / rounds)</figcaption>
+        </figure>
+
+        <h2 class="reveal">What shipped</h2>
+        <ul class="reveal">
+          <li><strong>Sequence Builder</strong> — sections, pose instances, group blocks, drag reorder, duration calculation, templates / clone</li>
+          <li><strong>Pose Library</strong> — 50+ poses and variations as first-class objects</li>
+          <li><strong>Sequence Library</strong> — browse and deep-link into saved work</li>
+          <li><strong>Public surfaces</strong> — shareable sequence URLs and public profiles with schedule editing</li>
+          <li><strong>Auth</strong> — magic-link verification plus credential login</li>
+          <li><strong>Admin console</strong> — user search, ban/unban, 5 permission toggles</li>
+          <li><strong>Assets</strong> — Vercel Blob uploads for poses and profiles</li>
+        </ul>
+
+        <h2 class="reveal">How the system worked</h2>
+        <p class="reveal">
+          React 18 + Vite + React Router front end. Hono API with JWT and bcrypt. Turso / libSQL data.
+          Deployed on Vercel (<code>sculpt-sequences</code>). Role-flag permissions so instructor and admin tooling share one product.
+        </p>
+
+        <section class="walk reveal">
+          <h2>How the product worked</h2>
+          <p>
+            Sculpt is the loop instructors run every week: sign in, build a timed sequence, reuse poses from a library,
+            share publicly when ready, and keep multi-instructor access under admin control.
+          </p>
+
+          <div class="walk-step">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 01</p>
+              <h3>Auth into a private workspace</h3>
+              <p class="walk-goal">Goal: get instructors into a private workspace</p>
+              <p>
+                Magic-link verification and credential login drop instructors into their own practice workspace —
+                sequences and pose libraries stay private until they choose to publish. That boundary mattered before
+                any of the craft tools were useful.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block" style="margin:0">
+                <img src="../assets/sculpt/login.jpg" alt="Sculpt Architect login screen" />
+                <figcaption>Auth — magic-link / credentials into the instructor workspace</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step walk-step--flip">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 02</p>
+              <h3>Teach on a timer</h3>
+              <p class="walk-goal">Goal: teach on a timer (play / pause / next)</p>
+              <p>
+                The sequence runner is what turns a plan into a class: play, pause, and advance while the clock runs.
+                Instructors stay on the floor with students instead of flipping between a spreadsheet and a phone timer.
+              </p>
+            </div>
+            <div class="walk-media">
+              <div class="showcase showcase-light">
+                <div class="showcase-bar"><span>Sequence runner</span><a href="https://sculpt-sequences.vercel.app/" target="_blank" rel="noopener">Open live app</a></div>
+                <div class="seq-demo" data-sequence-demo></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="walk-step">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 03</p>
+              <h3>Builder → library → public share</h3>
+              <p class="walk-goal">Goal: close the craft loop from draft to deep link</p>
+              <p>
+                Sequences start in the builder (sections, pose instances, group blocks, drag reorder, duration).
+                Saved work lands in the Sequence Library; poses and variations live as first-class objects in the
+                Pose Library (50+ catalog). When an instructor is ready, public sequence URLs and profile pages
+                carry the work outside the account — a deep link should deepen into a profile and schedule, not dead-end.
+              </p>
+              <p style="display:flex;flex-wrap:wrap;gap:0.45rem;margin-top:0.75rem;">
+                <span style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 0.55rem;border:1px solid var(--line);color:var(--ink-soft);">Builder</span>
+                <span style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 0.55rem;border:1px solid var(--line);color:var(--ink-soft);">Pose library</span>
+                <span style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 0.55rem;border:1px solid var(--line);color:var(--ink-soft);">Sequence library</span>
+                <span style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 0.55rem;border:1px solid var(--line);color:var(--ink-soft);">Public share</span>
+                <span style="font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.06em;text-transform:uppercase;padding:0.4rem 0.55rem;border:1px solid var(--line);color:var(--ink-soft);">Profile + schedule</span>
+              </p>
+            </div>
+            <div class="walk-media">
+              <p style="margin:0;padding:1.25rem;border:1px dashed var(--line);color:var(--ink-soft);font-size:0.95rem;">
+                No staged screenshots here — the live loop is builder craft, library reuse, then a shareable URL.
+                Open the product to walk the same path end to end.
+              </p>
+            </div>
+          </div>
+
+          <div class="walk-step walk-step--flip">
+            <div class="walk-copy">
+              <p class="walk-kicker">Surface 04</p>
+              <h3>Admin & permissions as ops</h3>
+              <p class="walk-goal">Goal: multi-instructor orgs without spreadsheet access control</p>
+              <p>
+                Admin search, ban/unban, and five permission scopes keep instructor and admin tooling in one product.
+                That was ops readiness for studios and multi-instructor orgs — who can edit libraries, who can publish,
+                who gets cut off — before the user base outgrew a single owner account.
+              </p>
+            </div>
+            <div class="walk-media">
+              <p style="margin:0;padding:1.25rem;border:1px dashed var(--line);color:var(--ink-soft);font-size:0.95rem;">
+                Role flags on JWT-backed accounts: five toggles plus ban controls so access doesn’t live in a side spreadsheet.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <h2 class="reveal">Reflection</h2>
+        <p class="reveal">
+          The story is a <strong>complete loop shipped</strong> — auth, library, share, admin — before there’s a public ARR slide. Auth, roles, and durability aren’t polish; they’re what make the product real.
+        </p>
+      </article>
+
+      <aside class="sidebar reveal">
+        <div class="sidebar-block">
+          <h3>Highlights</h3>
+          <ul>
+            <li>1→prod ownership</li>
+            <li>50+ pose catalog</li>
+            <li>5 permission scopes</li>
+            <li>6 product surfaces</li>
+            <li>2 public share types</li>
+            <li>67% prep time↓ (3h→1h)</li>
+            <li>2h saved / class</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Role</h3>
+          <ul>
+            <li>Product Owner</li>
+            <li>Full-stack builder</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Stack</h3>
+          <ul>
+            <li>React · Vite</li>
+            <li>Hono · JWT</li>
+            <li>Turso / libSQL</li>
+            <li>Vercel · Blob</li>
+          </ul>
+        </div>
+        <div class="sidebar-block">
+          <h3>Links</h3>
+          <a href="https://sculpt-sequences.vercel.app/" target="_blank" rel="noopener">Live app</a>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap">
+      <nav class="case-nav">
+        <a href="buymyspot.html">
+          <div class="dir">Previous</div>
+          <div class="name">BuyMySpot</div>
+        </a>
+        <a class="next" href="borderland.html">
+          <div class="dir">Next</div>
+          <div class="name">The Beacon · Borderland</div>
+        </a>
+      </nav>
+      <footer class="page-footer">
+        <span>© 2026 Ian Herdegen</span>
+        <a href="../index.html">Back to portfolio</a>
+      </footer>
+    </div>
+  </main>
+
+  <script src="../js/sequence-playthrough.js"></script>
+  <script>
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+  </script>
+</body>
+</html>
