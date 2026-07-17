@@ -287,3 +287,118 @@
   color: var(--ink-soft);
   margin: 0.55rem 0 0;
 }
+
+/* Sculpt Pose Library — immersive hover cards */
+.pose-stage {
+  margin: 1.75rem 0 2.25rem;
+  padding: 1.15rem 1rem 1.35rem;
+  border-radius: 1.15rem;
+  background: #ffe8e0;
+  border: 1px solid rgba(196, 92, 38, 0.12);
+}
+.pose-stage-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin: 0 0 0.95rem;
+  padding: 0 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(18, 21, 26, 0.55);
+}
+.pose-stage-bar strong {
+  color: var(--ink);
+  font-weight: 500;
+}
+.pose-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+@media (min-width: 640px) {
+  .pose-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
+}
+.pose-card {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  border-radius: 0.85rem;
+  cursor: pointer;
+  text-align: left;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateZ(0);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  box-shadow: 0 1px 2px rgba(18, 21, 26, 0.06);
+}
+.pose-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.85rem;
+}
+.pose-card-veil {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 1.65rem 0.85rem 0.85rem;
+  background: linear-gradient(180deg, transparent 0%, rgba(18, 12, 10, 0.72) 55%, rgba(18, 12, 10, 0.88) 100%);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
+  pointer-events: none;
+}
+.pose-card-cue {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.35;
+  font-style: italic;
+}
+.pose-card-meta {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+.pose-card:hover,
+.pose-card:focus-visible {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 18px 36px rgba(18, 21, 26, 0.18);
+  outline: none;
+  z-index: 2;
+}
+.pose-card:hover .pose-card-veil,
+.pose-card:focus-visible .pose-card-veil {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pose-stage--compact {
+  margin: 0;
+  padding: 0.85rem;
+}
+.pose-stage--compact .pose-grid {
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+}
+@media (min-width: 520px) {
+  .pose-stage--compact .pose-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.pose-stage--compact .pose-card-cue { font-size: 0.8rem; }
+.pose-stage figcaption,
+.pose-stage-caption {
+  margin: 0.85rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+}
+
