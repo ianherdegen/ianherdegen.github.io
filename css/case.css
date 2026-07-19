@@ -316,14 +316,19 @@ a:hover { color: var(--signal-deep); }
 /* Hireable outcomes board */
 .kpi-board {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1px;
   background: var(--kpi-gap);
   border: 1px solid var(--kpi-gap);
   margin: 0 0 2.5rem;
+  min-width: 0;
 }
 @media (min-width: 720px) {
-  .kpi-board { grid-template-columns: repeat(4, 1fr); }
+  .kpi-board { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+/* Sidebar appears at 900px and squeezes the main column — go back to 2-up until there is room for 4 */
+@media (min-width: 900px) and (max-width: 1120px) {
+  .kpi-board { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .kpi-board .kpi {
   background:
@@ -331,11 +336,13 @@ a:hover { color: var(--signal-deep); }
     var(--kpi-bg);
   color: var(--white);
   padding: 1.35rem 1.15rem 1.25rem;
+  min-width: 0;
 }
 .kpi-board .kpi .n {
   font-family: var(--font-display);
   font-weight: 800;
-  font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+  font-size: clamp(1.5rem, 2.4vw, 2.35rem);
+  white-space: nowrap;
   letter-spacing: -0.04em;
   line-height: 1;
   color: var(--kpi-num);
@@ -346,6 +353,7 @@ a:hover { color: var(--signal-deep); }
   line-height: 1.35;
   color: rgba(247, 248, 250, 0.78);
   margin: 0 0 0.45rem;
+  overflow-wrap: break-word;
 }
 .kpi-board .kpi .src {
   font-family: var(--font-mono);
