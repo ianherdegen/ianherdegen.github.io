@@ -643,6 +643,41 @@
     }
     .reveal.in .meter-fill { width: var(--w); }
 
+    .impact-duo {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.65rem;
+    }
+    @media (min-width: 520px) {
+      .impact-duo { grid-template-columns: 1fr 1fr; }
+    }
+    .impact-duo-stat {
+      padding: 1.1rem 1rem 1rem;
+      background: rgba(255, 255, 255, 0.55);
+      border-left: 3px solid var(--accent);
+    }
+    .impact-duo-stat .n {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+    .impact-duo-stat .n .est {
+      font-family: var(--font-mono);
+      font-size: 0.5em;
+      vertical-align: super;
+      color: var(--signal);
+    }
+    .impact-duo-stat .l {
+      font-size: 0.92rem;
+      line-height: 1.4;
+      color: var(--ink-soft);
+      margin: 0;
+    }
+
     .impact-chips {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -904,28 +939,14 @@
               </div>
             </div>
             <div class="impact-viz">
-              <div class="compare" aria-label="Conversion before and after chat and negotiation">
-                <div class="compare-row">
-                  <span class="name">Conversion before</span>
-                  <div class="compare-bar"><span style="--w:40%"></span></div>
-                  <span class="amt">1×</span>
+              <div class="impact-duo">
+                <div class="impact-duo-stat">
+                  <div class="n">+150%</div>
+                  <p class="l">More leases closed from the same traffic — after chat + price negotiation shipped</p>
                 </div>
-                <div class="compare-row">
-                  <span class="name">After chat + negotiation</span>
-                  <div class="compare-bar"><span style="--w:100%"></span></div>
-                  <span class="amt">+150%</span>
-                </div>
-              </div>
-              <div class="compare" aria-label="LTV versus CAC on organic campus demand" style="margin-top:0.85rem">
-                <div class="compare-row">
-                  <span class="name">Acquisition cost (organic)<span class="est">*</span></span>
-                  <div class="compare-bar"><span style="--w:20%"></span></div>
-                  <span class="amt">1×</span>
-                </div>
-                <div class="compare-row">
-                  <span class="name">Lifetime value returned<span class="est">*</span></span>
-                  <div class="compare-bar"><span style="--w:100%"></span></div>
-                  <span class="amt">~5×</span>
+                <div class="impact-duo-stat">
+                  <div class="n">~5×<span class="est">*</span></div>
+                  <p class="l">Every $1 spent acquiring customers returned ~$5 in lifetime value</p>
                 </div>
               </div>
               <div class="impact-chips">
