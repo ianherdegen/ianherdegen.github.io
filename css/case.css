@@ -15,7 +15,7 @@
   --kpi-gap: #1c222b;
   --est-num: #e8a87c;
   --white: #f7f8fa;
-  --font-display: "Syne", sans-serif;
+  --font-display: "Sora", sans-serif;
   --font-body: "Newsreader", Georgia, serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
@@ -228,8 +228,8 @@ a:hover { color: var(--signal-deep); }
   font-family: var(--font-display);
   font-weight: 800;
   font-size: clamp(2.4rem, 6vw, 4.4rem);
-  letter-spacing: -0.04em;
-  line-height: 0.95;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
   margin: 0 0 1rem;
   max-width: 16ch;
 }
