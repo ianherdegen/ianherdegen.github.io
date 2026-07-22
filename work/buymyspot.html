@@ -210,14 +210,14 @@
           Operator anecdote we kept because revenue concentration matters: one business generated nearly half of their game-day revenue from parking sales through the platform.
         </p>
 
-        <section class="walk reveal">
-          <h2>The product story</h2>
-          <p>
+        <section class="walk">
+          <h2 class="reveal">The product story</h2>
+          <p class="reveal">
             Five hard problems, one loop: find inventory, run it as capacity, price it honestly, pay the right bank account,
             and keep the deal on-platform in chat.
           </p>
 
-          <div class="walk-step">
+          <div class="walk-step reveal">
             <div class="walk-copy">
               <p class="walk-kicker">01 · Discovery</p>
               <h3>Students find a spot without bouncing</h3>
@@ -236,7 +236,7 @@
             </div>
           </div>
 
-          <div class="walk-step walk-step--flip">
+          <div class="walk-step walk-step--flip reveal">
             <div class="walk-copy">
               <p class="walk-kicker">02 · Capacity calendar</p>
               <h3>Lots run as capacity, not one-off listings</h3>
@@ -255,7 +255,7 @@
             </div>
           </div>
 
-          <div class="walk-step">
+          <div class="walk-step reveal">
             <div class="walk-copy">
               <p class="walk-kicker">03 · Pricing engine</p>
               <h3>Prices stay honest through checkout</h3>
@@ -274,7 +274,7 @@
             </div>
           </div>
 
-          <div class="walk-step walk-step--flip">
+          <div class="walk-step walk-step--flip reveal">
             <div class="walk-copy">
               <p class="walk-kicker">04 · Multi-account payouts</p>
               <h3>Multiple payout accounts per seller</h3>
@@ -294,7 +294,7 @@
             </div>
           </div>
 
-          <div class="walk-step">
+          <div class="walk-step reveal">
             <div class="walk-copy">
               <p class="walk-kicker">05 · In-app chat</p>
               <h3>Chat keeps the deal on the listing</h3>
@@ -313,7 +313,7 @@
             </div>
           </div>
 
-          <div class="walk-step walk-step--flip">
+          <div class="walk-step walk-step--flip reveal">
             <div class="walk-copy">
               <p class="walk-kicker">06 · White-label storefront</p>
               <h3>Property managers get a shareable storefront</h3>
@@ -390,7 +390,7 @@
       <nav class="case-nav">
         <a href="borderland.html">
           <div class="dir">Previous</div>
-          <div class="name">The Beacon · Borderland</div>
+          <div class="name">Borderland</div>
         </a>
         <a class="next" href="sculpt-architect.html">
           <div class="dir">Next</div>
@@ -407,7 +407,7 @@
   <script>
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    }, { threshold: 0.02, rootMargin: "0px 0px -4% 0px" });
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
   </script>
 </body>

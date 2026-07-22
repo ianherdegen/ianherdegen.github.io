@@ -195,16 +195,16 @@
           Hosted on Vercel (<code>sculpt-sequences</code>). Role-flag permissions so instructor and admin tooling share one product.
         </p>
 
-        <section class="walk reveal">
-          <h2>How the product works</h2>
-          <p>
+        <section class="walk">
+          <h2 class="reveal">How the product works</h2>
+          <p class="reveal">
             After magic-link or credential sign-in, instructors move through five surfaces: build a timed sequence,
             pull from the pose catalog, find saved work in the sequence library, share a public sequence URL,
             and publish a profile with schedule.
             Separately, an admin panel controls user permissions and access — platform ops, not part of the instructor loop.
           </p>
 
-          <div class="walk-step">
+          <div class="walk-step reveal">
             <div class="walk-copy">
               <p class="walk-kicker">Surface 01 · Sequence Builder</p>
               <h3>Plan the class on a clock</h3>
@@ -222,7 +222,7 @@
             </div>
           </div>
 
-          <div class="walk-step walk-step--flip">
+          <div class="walk-step walk-step--flip reveal">
             <div class="walk-copy">
               <p class="walk-kicker">Surface 02 · Pose Library</p>
               <h3>Reuse poses instead of rewriting them</h3>
@@ -240,7 +240,7 @@
             </div>
           </div>
 
-          <div class="walk-step">
+          <div class="walk-step reveal">
             <div class="walk-copy">
               <p class="walk-kicker">Surface 03 · Sequence Library</p>
               <h3>Find and reopen saved work</h3>
@@ -258,7 +258,7 @@
             </div>
           </div>
 
-          <div class="walk-step walk-step--flip">
+          <div class="walk-step walk-step--flip reveal">
             <div class="walk-copy">
               <p class="walk-kicker">Surface 04 · Public Sequence</p>
               <h3>Teach on a timer from a share link</h3>
@@ -276,7 +276,7 @@
             </div>
           </div>
 
-          <div class="walk-step">
+          <div class="walk-step reveal">
             <div class="walk-copy">
               <p class="walk-kicker">Surface 05 · Public Profile + Schedule</p>
               <h3>Carry the brand past a single sequence</h3>
@@ -294,7 +294,7 @@
             </div>
           </div>
 
-          <div class="walk-step walk-step--flip">
+          <div class="walk-step walk-step--flip reveal">
             <div class="walk-copy">
               <p class="walk-kicker">Ops · Admin</p>
               <h3>Permissions without a side spreadsheet</h3>
@@ -365,7 +365,7 @@
         </a>
         <a class="next" href="borderland.html">
           <div class="dir">Next</div>
-          <div class="name">The Beacon · Borderland</div>
+          <div class="name">Borderland</div>
         </a>
       </nav>
       <footer class="page-footer">
@@ -378,7 +378,7 @@
   <script>
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    }, { threshold: 0.02, rootMargin: "0px 0px -4% 0px" });
     document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
   </script>
 </body>
