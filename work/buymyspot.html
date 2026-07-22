@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BuyMySpot — Case Study · Ian Herdegen</title>
-  <meta name="description" content="How I led BuyMySpot from campus parking marketplace to B2B SaaS — microservices, Stripe Connect, and conversion-driving chat." />
+  <meta name="description" content="How I co-owned BuyMySpot from campus parking marketplace to B2B SaaS — capacity calendars, sealed pricing, multi-account Stripe payouts, and on-platform chat." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -34,7 +34,7 @@
         <span>Ann Arbor · Big Ten campuses</span>
       </div>
       <h1>Campus parking marketplace → B2B SaaS</h1>
-      <p class="lede">I co-owned BuyMySpot as it grew from peer-to-peer spot listings into tools property managers use to bulk-list, waitlist, and convert demand — running the roadmap and the property-manager relationships while keeping buyers moving through lease and chat flows that actually close.</p>
+      <p class="lede">I co-owned BuyMySpot as it grew from peer-to-peer spot listings into SaaS property managers run lots through — capacity calendars, honest pricing, multi-account Stripe payouts, and chat that kept deals on-platform. I ran the roadmap and the property-manager relationships while the platform’s hard problems stayed trustworthy.</p>
     </div>
   </header>
 
@@ -64,8 +64,8 @@
           </div>
           <div class="kpi">
             <div class="n">&lt;48h</div>
-            <p class="l">Median first message → signed lease</p>
-            <div class="src">After messaging features added</div>
+            <p class="l">Median time to signed lease</p>
+            <div class="src">Once deals closed in-app via chat</div>
           </div>
           <div class="kpi">
             <div class="n">1,000+</div>
@@ -113,8 +113,8 @@
             </tr>
             <tr>
               <td>&lt;48h</td>
-              <td>Median time from first message to signed lease after messaging features added</td>
-              <td class="why">Clock time from first message to signed lease</td>
+              <td>Median time to signed lease once deals closed in-app via chat</td>
+              <td class="why">On-platform close speed after messaging shipped</td>
             </tr>
             <tr>
               <td>1,000+</td>
@@ -149,21 +149,25 @@
 
         <h2 class="reveal">The challenge</h2>
         <p class="reveal">
-          Campus parking is scarce and fragmented. Students need spots near campus; hosts and property managers have inventory —
-          but one-off listings don’t scale when you’re managing lots, game-day demand, or multi-spot properties.
-          BuyMySpot had to work as a trustworthy marketplace <em>and</em> evolve into SaaS that operators could run inventory through.
+          Campus parking is scarce and fragmented. Students need a spot near campus; hosts and property managers have inventory —
+          but one-off listings don’t scale when you’re running lots, semester leases, and game-day spikes.
+        </p>
+        <p class="reveal">
+          Marketplaces don’t stall on “more pins on a map.” They stall when capacity is opaque, prices can be gamed at checkout,
+          landlords don’t control who parks before money moves, and payouts can’t route to the right seller account.
+          BuyMySpot had to work as a trustworthy two-sided market <em>and</em> evolve into SaaS operators could run inventory through.
         </p>
 
         <h2 class="reveal">My approach</h2>
         <p class="reveal">
           As product co-owner I ran the roadmap end to end — prioritizing what got built based on customer needs and usage patterns,
-          then reprioritizing as signal came in. I helped spearhead the B2B shift (bulk listing, waitlists, capacity calendars…) and pushed the
-          conversion lever that made leases happen: in-app chat. That wasn’t a “nice-to-have” —
-          it’s where leases closed with a median under <strong>48 hours</strong> from first message to signed.
+          then reprioritizing as signal came in. I helped spearhead the B2B shift (bulk listing, waitlists, capacity calendars…)
+          and pushed the conversion lever that made leases finish on-platform: in-app chat. Before that, there was no in-product thread —
+          deals drifted to text/email or stalled. With chat on the listing, median time to a signed lease landed under <strong>48 hours</strong>.
         </p>
         <p class="reveal">
           I directed the technical roadmap in partnership with outside developers — translating customer needs into specs, making the
-          tradeoff calls, and keeping the platform’s services (ex. spots, leases, payments, chat, notifications) healthy as usage grew.
+          tradeoff calls, and keeping the platform’s services (ex. spots, leases, payments, price calculation, chat, notifications) healthy as usage grew.
           I drove the sales side primarily myself: persistently building the property-manager relationships that turned a student marketplace into a B2B product.
         </p>
 
@@ -174,13 +178,14 @@
 
         <h2 class="reveal">What shipped</h2>
         <ul class="reveal">
-          <li><strong>Discovery & marketing</strong> — Next.js site for find/list flows, campus markets (Ann Arbor, East Lansing, Madison, State College+), events, and blog CMS</li>
-          <li><strong>Seller inventory</strong> — custom date ranges (daily / weekly / monthly / full lease), multi-spot properties, amenities (EV, shelter, passes), vehicle size limits, featured event lots</li>
-          <li><strong>Demand tools</strong> — waitlists when inventory matches buyer need; lead capture via EmailOctopus</li>
-          <li><strong>Conversion stack</strong> — in-app messaging; lease checkout/finalize; approve/reject on rental requests</li>
-          <li><strong>Money movement</strong> — Stripe Connect seller accounts and payouts</li>
-          <li><strong>Seller dashboard</strong> — sales, income, upcoming payouts</li>
-          <li><strong>Platform</strong> — GraphQL API gateway over Users, Spots, Leases, Payments, Price Calculation, Chat, and Notifications services</li>
+          <li><strong>Discovery</strong> — map + list find-a-spot across campus markets (Ann Arbor, East Lansing, Madison, State College+)</li>
+          <li><strong>Capacity calendars</strong> — occupancy over date ranges from overlapping approved leases (seller app)</li>
+          <li><strong>Pricing engine</strong> — daily / weekly / monthly / full-lease schemes, subscription vs upfront, proration; quotes sealed so checkout can’t rewrite the invoice</li>
+          <li><strong>Lease gate</strong> — request → landlord approve/reject before payments clear</li>
+          <li><strong>Stripe Connect</strong> — custom multi payout accounts per seller (Connect’s one-account limit wasn’t enough for multi-property PMs)</li>
+          <li><strong>Chat</strong> — in-app messaging so deals close on the listing instead of drifting off-platform</li>
+          <li><strong>White-label storefronts</strong> — shareable branded inventory URLs for property managers</li>
+          <li><strong>Platform</strong> — GraphQL BFF over Users, Spots, Leases, Payments, Price Calculation, Chat, and Notifications (AWS Lambda + EventBridge)</li>
         </ul>
 
         <div class="media-row reveal">
@@ -196,30 +201,31 @@
 
         <h2 class="reveal">How the system works</h2>
         <p class="reveal">
-          Dual frontends: a Next.js marketing and discovery layer, and a React product app
-          served via S3 + CloudFront. Backend services run as AWS Lambda (SAM) with MongoDB Atlas per domain,
-          aggregated through GraphQL. Auth sits on Cognito. Maps use Mapbox. Payments run on Stripe Connect so hosts get paid without BuyMySpot becoming their bank.
+          Dual frontends: a Next.js marketing and discovery layer, and a React product app on S3 + CloudFront.
+          Domain microservices run as AWS Lambda with MongoDB Atlas per service, stitched through a GraphQL BFF.
+          Auth sits on Cognito. Async work fans out over EventBridge and SQS — lease state, payment charges/transfers, chat notifications.
+          Pricing lives in its own service. Money movement runs on Stripe Connect so hosts get paid without BuyMySpot becoming their bank.
         </p>
         <p class="reveal">
           Operator anecdote we kept because revenue concentration matters: one business generated nearly half of their game-day revenue from parking sales through the platform.
         </p>
 
         <section class="walk reveal">
-          <h2>How the product works</h2>
+          <h2>The product story</h2>
           <p>
-            The product has two jobs: help students find a usable spot fast, and give hosts and property managers
-            enough inventory tooling that supply can keep up with campus and game-day demand.
+            Five hard problems, one loop: find inventory, run it as capacity, price it honestly, pay the right bank account,
+            and keep the deal on-platform in chat.
           </p>
 
           <div class="walk-step">
             <div class="walk-copy">
-              <p class="walk-kicker">01</p>
-              <h3>Discover inventory on a map + list</h3>
-              <p class="walk-goal">Goal: reduce time-to-find for students</p>
+              <p class="walk-kicker">01 · Discovery</p>
+              <h3>Students find a spot without bouncing</h3>
+              <p class="walk-goal">Goal: reduce time-to-find</p>
               <p>
-                Find-a-spot put Mapbox pins and a scrollable listing pane on the same screen. Students could scan by
-                neighborhood, price, and amenities without bouncing between a map and a separate results page —
-                the path from “I need parking near campus” to a concrete listing.
+                Find-a-spot put map pins and a scrollable listing pane on the same screen. Students could scan by
+                neighborhood, price, and amenities — the path from “I need parking near campus” to a concrete listing
+                without a second results page.
               </p>
             </div>
             <div class="walk-media">
@@ -232,74 +238,111 @@
 
           <div class="walk-step walk-step--flip">
             <div class="walk-copy">
-              <p class="walk-kicker">02</p>
-              <h3>Map ↔ list stay in sync</h3>
-              <p class="walk-goal">Goal: show spatial search ↔ list sync</p>
+              <p class="walk-kicker">02 · Capacity calendar</p>
+              <h3>Lots run as capacity, not one-off listings</h3>
+              <p class="walk-goal">Goal: let property managers operate inventory at lot scale</p>
               <p>
-                Selecting a pin highlighted the matching card; selecting a card centered the pin. That coupling is
-                what made spatial search feel trustworthy — students weren’t guessing which list row belonged to
-                which spot on the block.
+                B2B inventory isn’t “list every space as its own pin.” It’s property → spot type → capacity
+                (<code>numberOfSpaces</code>), so a lot can sell N spaces over a date range. Capacity calendars
+                turn overlapping approved leases into an occupancy view — what operators need before they overbook a spot.
               </p>
             </div>
             <div class="walk-media">
-              <div class="showcase showcase-light">
-                <div class="showcase-bar"><span>Find-a-spot sync</span></div>
-                <div class="bms-mini" data-bms-mini></div>
-              </div>
+              <figure class="media-block" style="margin:0">
+                <img src="../assets/buymyspot/capacity-calendar.png" alt="BuyMySpot seller capacity calendar showing occupancy by listing and date" />
+                <figcaption>Seller capacity calendar</figcaption>
+              </figure>
             </div>
           </div>
 
           <div class="walk-step">
             <div class="walk-copy">
-              <p class="walk-kicker">03</p>
-              <h3>Seller tools for bulk inventory</h3>
-              <p class="walk-goal">Goal: give property managers tools that unlock bulk inventory / revenue</p>
+              <p class="walk-kicker">03 · Pricing engine</p>
+              <h3>Prices stay honest through checkout</h3>
+              <p class="walk-goal">Goal: one invoice engine for daily events and semester leases</p>
               <p>
-                This is where property managers stopped listing one spot at a time. Bulk listing,
-                waitlists, multi-spot properties, and date-range inventory let operators push lots live and capture
-                demand when supply was short.
+                The same inventory can be a game-day day-rate or an eight-month student lease. A dedicated pricing service
+                builds the schedule (daily / weekly / monthly / full lease, subscription vs upfront, proration), then seals
+                the quote so checkout can’t rewrite fees.
               </p>
             </div>
             <div class="walk-media">
               <figure class="media-block" style="margin:0">
-                <img src="../assets/buymyspot/features.jpg" alt="BuyMySpot seller and property-manager features" />
-                <figcaption>Seller / property-manager tools — bulk list, waitlists, demand tools</figcaption>
+                <img src="../assets/buymyspot/invoice.png" alt="BuyMySpot checkout invoice summary with monthly pricing and payment options" />
+                <figcaption>Invoice — sealed quote through checkout</figcaption>
               </figure>
             </div>
           </div>
 
           <div class="walk-step walk-step--flip">
             <div class="walk-copy">
-              <p class="walk-kicker">04</p>
-              <h3>Game-day demand concentration</h3>
-              <p class="walk-goal">Goal: event revenue concentration for hosts</p>
+              <p class="walk-kicker">04 · Multi-account payouts</p>
+              <h3>Multiple payout accounts per seller</h3>
+              <p class="walk-goal">Goal: match how property managers actually bank</p>
               <p>
-                Campus seasons aren’t flat. Football Saturdays and event weekends compressed demand into short windows.
-                Featured event lots and flexible date ranges let hosts monetize those spikes — including operators
-                who concentrated a large share of game-day parking revenue through the platform.
+                Stripe Connect only supported one seller account per user. That broke real property managers —
+                different properties often pay into different banks. I pushed a custom multi-account solution on top of Connect:
+                sellers can attach multiple payout accounts, properties point at the right one, and leases freeze that routing
+                when the deal is made so money still lands in the correct bank.
               </p>
             </div>
             <div class="walk-media">
-              <div class="media-row" style="margin:0">
-                <figure class="media-block" style="margin:0">
-                  <img src="../assets/buymyspot/um-football.jpeg" alt="Michigan Stadium on game day" />
-                  <figcaption>Game-day demand</figcaption>
-                </figure>
-                <figure class="media-block" style="margin:0">
-                  <img src="../assets/buymyspot/tailgate-parking.jpeg" alt="Tailgate parking near campus" />
-                  <figcaption>Event / lot inventory</figcaption>
-                </figure>
-              </div>
+              <figure class="media-block" style="margin:0">
+                <img src="../assets/buymyspot/seller-accounts.png" alt="BuyMySpot seller accounts with multiple payout accounts — sensitive IDs and bank details redacted" />
+                <figcaption>Custom multi-account payouts per seller</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step">
+            <div class="walk-copy">
+              <p class="walk-kicker">05 · In-app chat</p>
+              <h3>Chat keeps the deal on the listing</h3>
+              <p class="walk-goal">Goal: stop leases from drifting off-platform</p>
+              <p>
+                Before in-app chat, there wasn’t a first message in the product — buyers and lessors bounced to text or email,
+                and a lot of deals never came back. Messaging put the conversation on the listing itself.
+                Once closes happened in-app, median time to a signed lease was under <strong>48 hours</strong>.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block" style="margin:0">
+                <img src="../assets/buymyspot/chat.png" alt="BuyMySpot in-app messaging with conversation list and active chat thread" />
+                <figcaption>On-platform messaging — deals stay with the listing</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step walk-step--flip">
+            <div class="walk-copy">
+              <p class="walk-kicker">06 · White-label storefront</p>
+              <h3>Property managers get a shareable storefront</h3>
+              <p class="walk-goal">Goal: B2B distribution without a second product</p>
+              <p>
+                White-label owner profiles let a PM share a branded inventory URL — their logo, their lots —
+                without standing up a separate site. That’s the SaaS edge of the marketplace: operators can send demand
+                straight to their capacity.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block media-placeholder" style="margin:0">
+                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for white-label owner profile screenshot">
+                  <span class="media-placeholder-label">Add image</span>
+                  <span class="media-placeholder-hint">White-label owner storefront</span>
+                </div>
+                <figcaption>Branded PM inventory URL</figcaption>
+              </figure>
             </div>
           </div>
         </section>
 
         <h2 class="reveal">Reflection</h2>
         <p class="reveal">
-          Marketplaces don’t stall on “more listings” — they stall on trust, speed-to-agreement, and payouts.
-          Chat brought median time from first message to signed lease under <strong>48 hours</strong>
-          on a platform that generated <strong>&gt;$100K</strong> for property managers, served <strong>500+</strong> customers,
-          and reached <strong>1,000+</strong> students looking for parking.
+          Marketplaces don’t stall on “more listings” — they stall on capacity, price integrity, approval, and payouts.
+          We made lots operable as capacity, sealed invoices through checkout, gated money behind landlord approval,
+          and built multi payout accounts on Stripe Connect when one seller account per user wasn’t enough —
+          while in-app chat kept closes on the listing (median under <strong>48 hours</strong> to signed)
+          on a platform that generated <strong>&gt;$100K</strong> for property managers and served <strong>500+</strong> customers.
         </p>
         <p class="reveal">
           I co-owned this one with a team, pre–vibe-coding — directing outside developers while running the roadmap and property-manager relationships.
@@ -337,9 +380,10 @@
           <ul>
             <li>React · Next.js</li>
             <li>AWS Lambda · Cognito</li>
-            <li>GraphQL · MongoDB</li>
+            <li>GraphQL · EventBridge</li>
+            <li>MongoDB Atlas</li>
             <li>Stripe Connect</li>
-            <li>Mapbox · EmailOctopus</li>
+            <li>Mapbox</li>
           </ul>
         </div>
       </aside>
@@ -363,7 +407,6 @@
     </div>
   </main>
 
-  <script src="../js/bms-mini.js"></script>
   <script>
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });

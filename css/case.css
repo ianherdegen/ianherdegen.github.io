@@ -482,6 +482,33 @@ a:hover { color: var(--signal-deep); }
   color: var(--ink-soft);
   padding: 0.75rem 1rem;
 }
+.media-placeholder .media-placeholder-frame {
+  display: grid;
+  place-content: center;
+  gap: 0.45rem;
+  aspect-ratio: 16 / 10;
+  padding: 1.5rem;
+  text-align: center;
+  background: color-mix(in srgb, var(--accent-soft) 70%, var(--paper-2));
+  border: 1px solid var(--line);
+}
+.media-placeholder-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.media-placeholder-hint {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  line-height: 1.4;
+  color: var(--ink-soft);
+  max-width: 32ch;
+  margin-inline: auto;
+}
+.media-row .media-placeholder .media-placeholder-frame { aspect-ratio: 4 / 3; }
 .media-row {
   display: grid;
   grid-template-columns: 1fr 1fr;

@@ -44,8 +44,8 @@
   letter-spacing: 0.04em;
   color: var(--ink);
   padding: 0.65rem 0.75rem;
-  background: rgba(26, 107, 99, 0.08);
-  border-left: 2px solid var(--teal);
+  background: var(--accent-soft, rgba(26, 107, 99, 0.08));
+  border-left: 2px solid var(--accent, var(--teal));
   margin: 0 0 0.5rem;
 }
 
