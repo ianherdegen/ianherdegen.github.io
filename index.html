@@ -412,6 +412,31 @@
       --accent-wash: rgba(163, 45, 69, 0.07);
       --accent-track: rgba(163, 45, 69, 0.16);
     }
+    .project-block--wip .case--wip {
+      cursor: default;
+      pointer-events: none;
+    }
+    .project-block--wip .case--wip:hover { background: transparent; }
+    .case-read--muted {
+      color: var(--ink-soft);
+    }
+    .case-read--muted::after { content: none; }
+    .case-visual--wip {
+      display: grid;
+      place-items: center;
+      background:
+        linear-gradient(145deg, var(--accent-wash), transparent 65%),
+        var(--paper-2);
+      border: 1px dashed color-mix(in srgb, var(--accent) 35%, var(--line));
+    }
+    .wip-mark {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      opacity: 0.7;
+    }
 
     .project-block .case {
       border-top: none;
@@ -872,7 +897,7 @@
       <div class="wrap">
         <p class="section-label reveal">Selected work</p>
         <h2 class="section-title reveal">Three products. Revenue, retention, return.</h2>
-        <p class="section-lead reveal">Each project below pairs the story with the scoreboard — what shipped, and what it moved. On BuyMySpot I co-owned product with a team; on Sculpt Architect I built end to end; on Borderland I built the stack and ran the season with an event manager.</p>
+        <p class="section-lead reveal">Each project below pairs the story with the scoreboard — what shipped, and what it moved. On BuyMySpot I co-owned product with a team; on Sculpt Architect I built end to end. Borderland case study is in progress.</p>
 
         <!-- BuyMySpot -->
         <article class="project-block project-block--bms reveal">
@@ -982,63 +1007,23 @@
           </div>
         </article>
 
-        <!-- Borderland -->
-        <article class="project-block project-block--beacon reveal">
-          <a class="case" href="work/borderland.html">
+        <!-- Borderland (WIP) -->
+        <article class="project-block project-block--beacon project-block--wip reveal">
+          <div class="case case--wip">
             <div class="case-copy">
               <div class="case-meta">
                 <span>Borderland</span>
-                <span>Built &amp; operated end to end</span>
-                <span>2025 — 2026</span>
+                <span>Case study</span>
+                <span>WIP</span>
               </div>
-              <h3>A live tournament that filled rooms in Detroit</h3>
+              <h3>Borderland</h3>
               <p>
-                Recruited players, planned arenas with an event manager, kept budget headroom to rerun nights, and built games, visas,
-                props tools, and ops. Craft serious enough to impress — still fun for the room. 1,000 cards + Movement → 160+ across five venues.
+                Live tournament season in Detroit — games, visas, recruitment, and ops. Full case study coming soon.
               </p>
-              <span class="case-read">Read full case study</span>
+              <span class="case-read case-read--muted">Case study in progress</span>
             </div>
-            <div>
-              <div class="case-visual">
-                <img src="assets/borderland/crew.jpg" alt="Borderland crew at a Detroit arena — Jack of Hearts backdrop" />
-                <span class="badge">Live tournament</span>
-              </div>
-              <div class="poster-strip" aria-label="Borderland venue posters">
-                <img src="assets/borderland/Chroma.jpg" alt="Clubs arena poster — Chroma" />
-                <img src="assets/borderland/tangent.jpg" alt="Diamonds arena poster — Tangent Gallery" />
-                <img src="assets/borderland/Lincoln.jpg" alt="Spades arena poster — Lincoln Street Art Park" />
-                <img src="assets/borderland/Russell.jpg" alt="Finale poster — Russell Art Building" />
-              </div>
-            </div>
-          </a>
-          <div class="project-stats">
-            <div class="impact-hero">
-              <div class="impact-hero-stat">
-                <div class="n">160+</div>
-                <p class="l">Players across five Detroit venues</p>
-              </div>
-            </div>
-            <div class="impact-viz">
-              <div class="compare" aria-label="Invitation cards vs players">
-                <div class="compare-row">
-                  <span class="name">Invitation cards</span>
-                  <div class="compare-bar"><span style="--w:100%"></span></div>
-                  <span class="amt">1,000</span>
-                </div>
-                <div class="compare-row">
-                  <span class="name">Players who showed</span>
-                  <div class="compare-bar"><span style="--w:16%"></span></div>
-                  <span class="amt">160+</span>
-                </div>
-              </div>
-              <div class="impact-chips">
-                <div class="impact-chip"><div class="n">5</div><p class="l">Venues</p></div>
-                <div class="impact-chip"><div class="n">5</div><p class="l">Multiplayer games</p></div>
-                <div class="impact-chip"><div class="n">$500+</div><p class="l">Prize stakes</p></div>
-                <div class="impact-chip"><div class="n">1,000</div><p class="l">Invitation cards</p></div>
-                <div class="impact-chip"><div class="n">Movement</div><p class="l">Festival promo</p></div>
-                <div class="impact-chip"><div class="n">Ops</div><p class="l">Brain + agent + Finance</p></div>
-              </div>
+            <div class="case-visual case-visual--wip" aria-hidden="true">
+              <span class="wip-mark">WIP</span>
             </div>
           </div>
         </article>

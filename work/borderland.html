@@ -190,10 +190,12 @@
         <section class="walk">
           <h2 class="reveal">The product story</h2>
           <p class="reveal">
-            Same loop as any serious product case: recruit demand, plan operations, take money honestly,
-            keep budget headroom, ship the experience in the room, then keep the org runnable —
+            Player path first — how someone found Borderland, got a visa, showed up, played, and left with people they met —
+            then behind the scenes: planning, budget, props, and the ops stack that kept the season runnable
             without sanding the fun off or chasing Netflix scale.
           </p>
+
+          <p class="walk-phase reveal">Player path</p>
 
           <div class="walk-step reveal">
             <div class="walk-copy">
@@ -204,7 +206,6 @@
                 Borderland started in the street and at Movement Festival — 1,000 invitation cards and festival promo
                 into <strong>160+</strong> participants across five venues. Recruiting wasn’t a growth-hack deck;
                 it was hand-to-hand: cards, conversations, suit paths, and a reason to trust a weird night.
-                Friendships and crew connections formed across arenas. That was the outcome that mattered.
               </p>
             </div>
             <div class="walk-media">
@@ -220,7 +221,119 @@
 
           <div class="walk-step walk-step--flip reveal">
             <div class="walk-copy">
-              <p class="walk-kicker">02 · Plan</p>
+              <p class="walk-kicker">02 · Visas</p>
+              <h3>Payments that unlock the night</h3>
+              <p class="walk-goal">Goal: entitlements games and hunts can trust</p>
+              <p>
+                Stripe visas weren’t a tip jar. Checkout wrote into capacity rules — play vs watch, arena caps, cutoffs —
+                and those entitlements gated hunt claims and live games. Scarcity and access had to be the same system,
+                or day-of ops falls back to spreadsheets.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block media-placeholder" style="margin:0">
+                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for visa checkout or landing">
+                  <span class="media-placeholder-label">Add image</span>
+                  <span class="media-placeholder-hint">Visa checkout / suit path / capacity UI</span>
+                </div>
+                <figcaption>Visas — checkout wired to access</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step reveal">
+            <div class="walk-copy">
+              <p class="walk-kicker">03 · Show-up</p>
+              <h3>SMS, voice, and email that fill chairs</h3>
+              <p class="walk-goal">Goal: get registered players into the building</p>
+              <p>
+                Admin ran Twilio SMS and voice/voicemail (including machine detection for voicemail drops)
+                plus 29 templated email variants keyed to arena, timing, and registration state.
+                Reminding people is unglamorous. Not doing it empties a venue.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block media-placeholder" style="margin:0">
+                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for admin SMS or email tooling">
+                  <span class="media-placeholder-label">Add image</span>
+                  <span class="media-placeholder-hint">Admin SMS / voice / email templates</span>
+                </div>
+                <figcaption>Show-up stack — three channels, one calendar</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step walk-step--flip reveal">
+            <div class="walk-copy">
+              <p class="walk-kicker">04 · Arena Hunt</p>
+              <h3>Physical codes ↔ digital claims</h3>
+              <p class="walk-goal">Goal: venue hunt that survives real crowds</p>
+              <p>
+                Arena Hunt turned printed QR / scan codes into timed claims with caps and bonuses into phase-2 games.
+                Physical props and digital state had to agree — or the night breaks the second someone scans twice.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block media-placeholder" style="margin:0">
+                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for QR hunt screenshot or photo">
+                  <span class="media-placeholder-label">Add image</span>
+                  <span class="media-placeholder-hint">QR / scan hunt UI or players scanning</span>
+                </div>
+                <figcaption>Arena Hunt — print ↔ timed digital claims</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step reveal">
+            <div class="walk-copy">
+              <p class="walk-kicker">05 · Live games</p>
+              <h3>Fun for contestants. Serious under the hood.</h3>
+              <p class="walk-goal">Goal: earn respect without feeling corporate</p>
+              <p>
+                Socket.IO rooms ran Breakpoint, Echo, Fetch, and Zombie Hunt with server authority —
+                while venue projectors and TTS callers kept the whole room on one program.
+                Players got a night that felt wild. The systems underneath had to feel intentional —
+                the opposite of “juvenile app + folding tables.”
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block media-placeholder" style="margin:0">
+                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for live game or projector">
+                  <span class="media-placeholder-label">Add image</span>
+                  <span class="media-placeholder-hint">Live multiplayer UI / venue projector / TTS caller</span>
+                </div>
+                <figcaption>Live play — room + server on the same clock</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="walk-step walk-step--flip reveal">
+            <div class="walk-copy">
+              <p class="walk-kicker">06 · Community</p>
+              <h3>Friendships that outlast one arena</h3>
+              <p class="walk-goal">Goal: the night becomes a network</p>
+              <p>
+                The point wasn’t a one-off crowd. Players met crew, came back for later suits, and kept talking after doors closed.
+                <strong>Discord Relay</strong> (“The Stream”) pushed that community into a public channel so the season
+                wasn’t trapped in private threads — still fun, not a corporate offsite.
+              </p>
+            </div>
+            <div class="walk-media">
+              <figure class="media-block media-placeholder" style="margin:0">
+                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for Discord Relay or community night">
+                  <span class="media-placeholder-label">Add image</span>
+                  <span class="media-placeholder-hint">Players / friendships / Discord Relay</span>
+                </div>
+                <figcaption>Community — rooms that turn into relationships</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <p class="walk-phase reveal">Behind the scenes</p>
+
+          <div class="walk-step reveal">
+            <div class="walk-copy">
+              <p class="walk-kicker">07 · Plan</p>
               <h3>Arenas with an event manager</h3>
               <p class="walk-goal">Goal: nights that can actually run</p>
               <p>
@@ -241,7 +354,7 @@
             </div>
           </div>
 
-          <div class="media-row reveal" style="margin-top:0">
+          <div class="media-row reveal">
             <figure class="media-block media-placeholder">
               <div class="media-placeholder-frame" role="img" aria-label="Placeholder for Clubs or Diamonds arena">
                 <span class="media-placeholder-label">Add image</span>
@@ -258,31 +371,9 @@
             </figure>
           </div>
 
-          <div class="walk-step reveal">
-            <div class="walk-copy">
-              <p class="walk-kicker">03 · Visas</p>
-              <h3>Payments that unlock the night</h3>
-              <p class="walk-goal">Goal: entitlements games and hunts can trust</p>
-              <p>
-                Stripe visas weren’t a tip jar. Checkout wrote into capacity rules — play vs watch, arena caps, cutoffs —
-                and those entitlements gated hunt claims and live games. Scarcity and access had to be the same system,
-                or day-of ops falls back to spreadsheets.
-              </p>
-            </div>
-            <div class="walk-media">
-              <figure class="media-block media-placeholder" style="margin:0">
-                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for visa checkout or landing">
-                  <span class="media-placeholder-label">Add image</span>
-                  <span class="media-placeholder-hint">Visa checkout / suit path / capacity UI</span>
-                </div>
-                <figcaption>Visas — checkout wired to access</figcaption>
-              </figure>
-            </div>
-          </div>
-
           <div class="walk-step walk-step--flip reveal">
             <div class="walk-copy">
-              <p class="walk-kicker">04 · Budget</p>
+              <p class="walk-kicker">08 · Budget</p>
               <h3>Spend lean enough to run again</h3>
               <p class="walk-goal">Goal: headroom to rerun a night if needed</p>
               <p>
@@ -304,7 +395,7 @@
 
           <div class="walk-step reveal">
             <div class="walk-copy">
-              <p class="walk-kicker">05 · Props &amp; décor</p>
+              <p class="walk-kicker">09 · Props &amp; décor</p>
               <h3>Interfaces that fabricate something new</h3>
               <p class="walk-goal">Goal: each arena can decorate without starting from scratch</p>
               <p>
@@ -343,79 +434,14 @@
 
           <div class="walk-step walk-step--flip reveal">
             <div class="walk-copy">
-              <p class="walk-kicker">06 · Arena Hunt</p>
-              <h3>Physical codes ↔ digital claims</h3>
-              <p class="walk-goal">Goal: venue hunt that survives real crowds</p>
-              <p>
-                Arena Hunt turned printed QR / scan codes into timed claims with caps and bonuses into phase-2 games.
-                Physical props and digital state had to agree — or the night breaks the second someone scans twice.
-              </p>
-            </div>
-            <div class="walk-media">
-              <figure class="media-block media-placeholder" style="margin:0">
-                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for QR hunt screenshot or photo">
-                  <span class="media-placeholder-label">Add image</span>
-                  <span class="media-placeholder-hint">QR / scan hunt UI or players scanning</span>
-                </div>
-                <figcaption>Arena Hunt — print ↔ timed digital claims</figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <div class="walk-step reveal">
-            <div class="walk-copy">
-              <p class="walk-kicker">07 · Live games</p>
-              <h3>Fun for contestants. Serious under the hood.</h3>
-              <p class="walk-goal">Goal: earn respect without feeling corporate</p>
-              <p>
-                Socket.IO rooms ran Breakpoint, Echo, Fetch, and Zombie Hunt with server authority —
-                while venue projectors and TTS callers kept the whole room on one program.
-                Players got a night that felt wild. The systems underneath had to feel intentional —
-                the opposite of “juvenile app + folding tables.”
-              </p>
-            </div>
-            <div class="walk-media">
-              <figure class="media-block media-placeholder" style="margin:0">
-                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for live game or projector">
-                  <span class="media-placeholder-label">Add image</span>
-                  <span class="media-placeholder-hint">Live multiplayer UI / venue projector / TTS caller</span>
-                </div>
-                <figcaption>Live play — room + server on the same clock</figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <div class="walk-step walk-step--flip reveal">
-            <div class="walk-copy">
-              <p class="walk-kicker">08 · Show-up ops</p>
-              <h3>SMS, voice, and email that fill chairs</h3>
-              <p class="walk-goal">Goal: get registered players into the building</p>
-              <p>
-                Admin ran Twilio SMS and voice/voicemail (including machine detection for voicemail drops)
-                plus 29 templated email variants keyed to arena, timing, and registration state.
-                Reminding people is unglamorous. Not doing it empties a venue.
-              </p>
-            </div>
-            <div class="walk-media">
-              <figure class="media-block media-placeholder" style="margin:0">
-                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for admin SMS or email tooling">
-                  <span class="media-placeholder-label">Add image</span>
-                  <span class="media-placeholder-hint">Admin SMS / voice / email templates</span>
-                </div>
-                <figcaption>Show-up stack — three channels, one calendar</figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <div class="walk-step reveal">
-            <div class="walk-copy">
-              <p class="walk-kicker">09 · Brain + agent</p>
-              <h3>Meeting notes that don’t vanish in chat</h3>
-              <p class="walk-goal">Goal: ops knowledge the season can actually use</p>
+              <p class="walk-kicker">10 · Ops stack</p>
+              <h3>Brain, agent, and Call for Crew</h3>
+              <p class="walk-goal">Goal: run the season without living in DMs</p>
               <p>
                 <strong>Beacon Brain</strong> is a Turso-backed ops wiki — meeting notes, runbooks, workbooks —
                 Notion-shaped for how we actually ran venues. I wired a Cursor / MCP-style agent against Brain
-                so notes and follow-ups could be drafted from the knowledge base instead of disappearing in DMs.
+                so notes and follow-ups could be drafted from the knowledge base instead of disappearing in chat.
+                <strong>Call for Crew</strong> recruited gamemakers and builders so each night had people behind the curtain.
               </p>
             </div>
             <div class="walk-media">
@@ -444,29 +470,6 @@
               </div>
               <figcaption>Call for Crew</figcaption>
             </figure>
-          </div>
-
-          <div class="walk-step walk-step--flip reveal">
-            <div class="walk-copy">
-              <p class="walk-kicker">10 · Community stream</p>
-              <h3>Crew + Relay — keep the human parts</h3>
-              <p class="walk-goal">Goal: staff the season and keep community visible</p>
-              <p>
-                <strong>Call for Crew</strong> recruited gamemakers and builders. <strong>Discord Relay</strong> (“The Stream”)
-                pushed community into a public channel so the season wasn’t trapped in private threads.
-                Satellites kept ops adult without turning the night into a corporate offsite —
-                friendships first, systems in service of that.
-              </p>
-            </div>
-            <div class="walk-media">
-              <figure class="media-block media-placeholder" style="margin:0">
-                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for Discord Relay or community">
-                  <span class="media-placeholder-label">Add image</span>
-                  <span class="media-placeholder-hint">Discord Relay / The Stream / community night</span>
-                </div>
-                <figcaption>Community — Relay + friendships in the room</figcaption>
-              </figure>
-            </div>
           </div>
         </section>
 
