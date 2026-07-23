@@ -476,15 +476,16 @@ a:hover { color: var(--signal-deep); }
 }
 .case-beacon .media-block {
   background: var(--paper-2);
-  overflow: hidden;
+  overflow: visible;
 }
 .case-beacon .media-block img {
   display: block;
-  width: 100%;
+  width: 100% !important;
   max-width: 100%;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
+  height: auto !important;
+  max-height: none !important;
+  aspect-ratio: unset !important;
+  object-fit: unset !important;
   object-position: center;
   background: var(--paper-2);
 }
@@ -495,12 +496,19 @@ a:hover { color: var(--signal-deep); }
 .case-beacon .walk-media .media-block {
   margin: 0;
   max-width: 100%;
+  overflow: visible;
 }
 .case-beacon .media-row .media-block img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: auto;
-  object-fit: contain;
+  width: 100% !important;
+  height: auto !important;
+  aspect-ratio: unset !important;
+  object-fit: unset !important;
+}
+.case-beacon .showcase {
+  overflow: auto;
+}
+.case-beacon .showcase iframe {
+  height: min(780px, 85vh);
 }
 .media-block figcaption {
   font-family: var(--font-mono);
