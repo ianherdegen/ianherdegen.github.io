@@ -476,18 +476,30 @@ a:hover { color: var(--signal-deep); }
 }
 .case-beacon .media-block {
   background: var(--paper-2);
+  overflow: hidden;
 }
 .case-beacon .media-block img {
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: auto;
   object-fit: contain;
   object-position: center;
   background: var(--paper-2);
 }
+.case-beacon .walk-media {
+  min-width: 0;
+  max-width: 100%;
+}
+.case-beacon .walk-media .media-block {
+  margin: 0;
+  max-width: 100%;
+}
 .case-beacon .media-row .media-block img {
-  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+  aspect-ratio: auto;
   object-fit: contain;
 }
 .media-block figcaption {
