@@ -699,6 +699,14 @@
       line-height: 1.35;
       margin: 0;
     }
+    .project-stats .impact-chip-note {
+      margin: 0.65rem 0 0;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.03em;
+      color: var(--ink-soft);
+      line-height: 1.4;
+    }
 
     .compare { display: grid; gap: 0.55rem; }
     .compare-row {
@@ -884,7 +892,7 @@
     <div class="hero-content">
       <h1 class="brand">Ian Herdegen</h1>
       <p class="hero-line">I own products people actually use.</p>
-      <p class="hero-sub">Product owner and builder across campus marketplace, instructor SaaS, and Detroit live-event platforms.</p>
+      <p class="hero-sub">Co-founder, instructor, and builder — campus marketplace, instructor SaaS, and Detroit live tournament platforms.</p>
       <div class="cta-row">
         <a class="btn btn-solid" href="#work">See the work</a>
         <a class="btn" href="mailto:herdegen@umich.edu">Get in touch</a>
@@ -897,7 +905,7 @@
       <div class="wrap">
         <p class="section-label reveal">Selected work</p>
         <h2 class="section-title reveal">Three products. Revenue, retention, return.</h2>
-        <p class="section-lead reveal">Each project below pairs the story with the scoreboard — what shipped, and what it moved. On BuyMySpot I co-owned product with a team; on Sculpt Architect I built end to end. Borderland case study is in progress.</p>
+        <p class="section-lead reveal">Each project below pairs the story with the scoreboard — what shipped, and what it moved. Co-founder on BuyMySpot; certified Sculpt Yoga instructor (Hot Bones) who built Sculpt Architect; product builder and event organizer on Borderland.</p>
 
         <!-- BuyMySpot -->
         <article class="project-block project-block--bms reveal">
@@ -905,7 +913,7 @@
             <div class="case-copy">
               <div class="case-meta">
                 <span>BuyMySpot</span>
-                <span>Product Co-Owner</span>
+                <span>Co-Founder</span>
                 <span>2019 — Present</span>
               </div>
               <h3>Campus parking marketplace → B2B SaaS</h3>
@@ -946,7 +954,7 @@
                 <div class="impact-chip"><div class="n">20+</div><p class="l">Active sellers</p></div>
                 <div class="impact-chip"><div class="n">5</div><p class="l">Campus markets</p></div>
                 <div class="impact-chip"><div class="n">&gt;$500</div><p class="l">BMS profit / mgr / mo</p></div>
-                <div class="impact-chip"><div class="n">7</div><p class="l">Years co-owning the product</p></div>
+                <div class="impact-chip"><div class="n">7</div><p class="l">Years as co-founder</p></div>
                 <div class="impact-chip"><div class="n">1,000+</div><p class="l">Demand-side users</p></div>
               </div>
             </div>
@@ -959,12 +967,12 @@
             <div class="case-copy">
               <div class="case-meta">
                 <span>Sculpt Architect</span>
-                <span>Product Owner / Builder</span>
+                <span>Certified instructor · Builder</span>
                 <span>SaaS</span>
               </div>
               <h3>Sequence builder for yoga instructors</h3>
               <p>
-                Owned end to end: sequence builder, pose library, public profiles, scheduling, magic-link auth,
+                Built end to end as a Hot Bones–certified Sculpt Yoga instructor: sequence builder, pose library, public profiles, scheduling, magic-link auth,
                 and permissions admin — so instructors can design, store, and share class flows.
                 Also migrated persistence from Supabase to Turso.
               </p>
@@ -1007,23 +1015,64 @@
           </div>
         </article>
 
-        <!-- Borderland (WIP) -->
-        <article class="project-block project-block--beacon project-block--wip reveal">
-          <div class="case case--wip">
+        <!-- Borderland -->
+        <article class="project-block project-block--beacon reveal">
+          <a class="case" href="work/borderland.html">
             <div class="case-copy">
               <div class="case-meta">
                 <span>Borderland</span>
-                <span>Case study</span>
-                <span>WIP</span>
+                <span>Product builder · Event organizer</span>
+                <span>2025 — 2026</span>
               </div>
-              <h3>Borderland</h3>
+              <h3>A live tournament that filled rooms in Detroit</h3>
               <p>
-                Live tournament season in Detroit — games, visas, recruitment, and ops. Full case study coming soon.
+                Recruited players through a high-friction entry (dice → win a mini-game → form), planned nights with an event manager,
+                and built a cloneable stack for paid tournament access, a doors-open field phase with live projector scoring, and Socket mobile player-to-player games.
+                162 joined; 93% left a phone; 33% came back for another night — built and run in 4 months.
               </p>
-              <span class="case-read case-read--muted">Case study in progress</span>
+              <span class="case-read">Read full case study</span>
             </div>
-            <div class="case-visual case-visual--wip" aria-hidden="true">
-              <span class="wip-mark">WIP</span>
+            <div>
+              <div class="case-visual">
+                <img src="assets/borderland/crew.jpg" alt="Borderland crew at a Detroit arena — Jack of Hearts backdrop" />
+                <span class="badge">Live tournament</span>
+              </div>
+              <div class="poster-strip" aria-label="Borderland venue posters">
+                <img src="assets/borderland/Chroma.jpg" alt="Clubs arena poster — Chroma" />
+                <img src="assets/borderland/tangent.jpg" alt="Diamonds arena poster — Tangent Gallery" />
+                <img src="assets/borderland/Lincoln.jpg" alt="Spades arena poster — Lincoln Street Art Park" />
+                <img src="assets/borderland/Russell.jpg" alt="Finale poster — Russell Art Building" />
+              </div>
+            </div>
+          </a>
+          <div class="project-stats">
+            <div class="impact-hero">
+              <div class="impact-hero-stat">
+                <div class="n">93%</div>
+                <p class="l">Voluntary phone opt-in on the interest form</p>
+              </div>
+            </div>
+            <div class="impact-viz">
+              <div class="compare" aria-label="Joined vs phones collected">
+                <div class="compare-row">
+                  <span class="name">Joined (past entry games)</span>
+                  <div class="compare-bar"><span style="--w:100%"></span></div>
+                  <span class="amt">162</span>
+                </div>
+                <div class="compare-row">
+                  <span class="name">Phones left voluntarily</span>
+                  <div class="compare-bar"><span style="--w:93%"></span></div>
+                  <span class="amt">151</span>
+                </div>
+              </div>
+              <div class="impact-chips">
+                <div class="impact-chip"><div class="n">33%</div><p class="l">Repeat attendees</p></div>
+                <div class="impact-chip"><div class="n">5</div><p class="l">Tournament nights</p></div>
+                <div class="impact-chip"><div class="n">4 mo</div><p class="l">Build → recruit → run</p></div>
+                <div class="impact-chip"><div class="n">5</div><p class="l">Player-to-player games</p></div>
+                <div class="impact-chip"><div class="n">1,000</div><p class="l">Invitation cards</p></div>
+                <div class="impact-chip"><div class="n">3</div><p class="l">Show-up channels — SMS · voice · email</p></div>
+              </div>
             </div>
           </div>
         </article>
@@ -1050,7 +1099,7 @@
               <div class="tool-name">Stripe · Stripe Connect</div>
               <div class="tool-tags">BuyMySpot · Borderland</div>
             </div>
-            <p class="tool-result">Seller payouts on parking leases; visa / ticket checkout for Borderland arenas — payments as product surface, not afterthought.</p>
+            <p class="tool-result">Seller payouts on parking leases; Borderland tournament-access (“visa”) checkout — payments as product surface, not afterthought.</p>
           </li>
           <li class="reveal">
             <div>
@@ -1064,14 +1113,14 @@
               <div class="tool-name">Twilio · SendGrid · Resend</div>
               <div class="tool-tags">Borderland · Call for Crew</div>
             </div>
-            <p class="tool-result">Segmented SMS, voicemail, and arena email sequences (registered vs unregistered, 5-day / 1-day / 1-hour) kept 160+ players on the same clock.</p>
+            <p class="tool-result">Segmented SMS, voicemail, and tournament-night email sequences (registered vs unregistered, 5-day / 1-day / 1-hour) kept 160+ players on the same clock.</p>
           </li>
           <li class="reveal">
             <div>
               <div class="tool-name">React · Next.js · Socket.IO · Mapbox</div>
               <div class="tool-tags">All products</div>
             </div>
-            <p class="tool-result">Player-facing landings, seller dashboards, live game rooms, and campus map discovery — UI that carries both narrative and operations.</p>
+            <p class="tool-result">Player-facing landings, seller dashboards, in-room game sessions, and campus map discovery — UI that carries both narrative and operations.</p>
           </li>
           <li class="reveal">
             <div>
@@ -1085,7 +1134,7 @@
               <div class="tool-name">Cursor · Claude · Analytics</div>
               <div class="tool-tags">Across the board</div>
             </div>
-            <p class="tool-result">AI-assisted shipping for games and ops tools; GA / Plausible / SEO loops for marketplace and HQ growth decisions.</p>
+            <p class="tool-result">AI-assisted shipping for in-room games and ops tools; GA / Plausible / SEO loops for marketplace and HQ growth decisions.</p>
           </li>
         </ul>
       </div>
