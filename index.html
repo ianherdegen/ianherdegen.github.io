@@ -794,6 +794,23 @@
       color: rgba(247, 248, 250, 0.4);
       margin-top: 0.35rem;
     }
+    .tool-group {
+      display: block;
+      list-style: none;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(247, 248, 250, 0.45);
+      margin: 1.75rem 0 0;
+      padding: 1.1rem 0 0.15rem;
+      border-bottom: none;
+      grid-template-columns: unset;
+    }
+    .tool-list > .tool-group:first-child {
+      margin-top: 0;
+      padding-top: 1.1rem;
+    }
 
     /* ——— About strip ——— */
     .about {
@@ -1067,9 +1084,33 @@
       <div class="wrap">
         <p class="section-label reveal">Tools</p>
         <h2 class="section-title reveal">The stack behind the results.</h2>
-        <p class="section-lead reveal">What I reached for when the product needed it.</p>
+        <p class="section-lead reveal">Grouped by layer — what players touched, what ran underneath, and how nights got built.</p>
 
         <ul class="tool-list">
+          <li class="tool-group reveal" aria-hidden="true">Interfaces</li>
+          <li class="reveal">
+            <div>
+              <div class="tool-name">React · Next.js · Vite</div>
+              <div class="tool-tags">BuyMySpot · Sculpt Architect · Borderland</div>
+            </div>
+            <p class="tool-result">Landings, dashboards, and product UIs — each app on the frontend pattern that fit it.</p>
+          </li>
+          <li class="reveal">
+            <div>
+              <div class="tool-name">Mapbox</div>
+              <div class="tool-tags">BuyMySpot</div>
+            </div>
+            <p class="tool-result">Campus map discovery for parking inventory — geography as the product surface.</p>
+          </li>
+          <li class="reveal">
+            <div>
+              <div class="tool-name">Socket.IO</div>
+              <div class="tool-tags">Borderland</div>
+            </div>
+            <p class="tool-result">Live in-room game sessions on mobile clients — realtime state for nights that couldn’t pause for a refresh.</p>
+          </li>
+
+          <li class="tool-group reveal" aria-hidden="true">Platform</li>
           <li class="reveal">
             <div>
               <div class="tool-name">AWS · Lambda · Cognito · CloudFront</div>
@@ -1079,6 +1120,15 @@
           </li>
           <li class="reveal">
             <div>
+              <div class="tool-name">Turso · libSQL · Vercel · Render</div>
+              <div class="tool-tags">Sculpt Architect · Borderland</div>
+            </div>
+            <p class="tool-result">Edge-friendly data and hosts for instructor SaaS and live immersive-games backends.</p>
+          </li>
+
+          <li class="tool-group reveal" aria-hidden="true">Payments &amp; messaging</li>
+          <li class="reveal">
+            <div>
               <div class="tool-name">Stripe · Stripe Connect</div>
               <div class="tool-tags">BuyMySpot · Borderland</div>
             </div>
@@ -1086,38 +1136,26 @@
           </li>
           <li class="reveal">
             <div>
-              <div class="tool-name">Turso · libSQL · Vercel</div>
-              <div class="tool-tags">Sculpt Architect · Brain · Finance · Borderland</div>
-            </div>
-            <p class="tool-result">Edge-friendly data for instructor SaaS, internal knowledge base, event finance ledger, and live immersive-games backends — one stack pattern across products.</p>
-          </li>
-          <li class="reveal">
-            <div>
               <div class="tool-name">Twilio · SendGrid · Resend</div>
-              <div class="tool-tags">Borderland · Call for Crew</div>
+              <div class="tool-tags">Borderland</div>
             </div>
-            <p class="tool-result">Segmented SMS, voicemail, and game-night email sequences (registered vs unregistered, 5-day / 1-day / 1-hour) kept players on the same clock.</p>
+            <p class="tool-result">Segmented SMS, voicemail, and game-night email sequences kept players on the same clock.</p>
           </li>
-          <li class="reveal">
-            <div>
-              <div class="tool-name">React · Next.js · Socket.IO · Mapbox</div>
-              <div class="tool-tags">All products</div>
-            </div>
-            <p class="tool-result">Player-facing landings, seller dashboards, in-room game sessions, and campus map discovery — UI that carries both narrative and operations.</p>
-          </li>
+
+          <li class="tool-group reveal" aria-hidden="true">Craft &amp; shipping</li>
           <li class="reveal">
             <div>
               <div class="tool-name">Figma · Guerrilla print · Physical builds</div>
               <div class="tool-tags">Borderland</div>
             </div>
-            <p class="tool-result">Venue posters, 1,000 invitation cards, and a parameterized airship build tool — product ownership that extends into the street and the shop floor.</p>
+            <p class="tool-result">Venue posters, 1,000 invitation cards, and an airship cut-template tool — product work that left the screen.</p>
           </li>
           <li class="reveal">
             <div>
               <div class="tool-name">Cursor · Claude · Analytics</div>
               <div class="tool-tags">Across the board</div>
             </div>
-            <p class="tool-result">AI-assisted shipping for in-room games and ops tools; GA / Plausible / SEO loops for marketplace and HQ growth decisions.</p>
+            <p class="tool-result">AI-assisted shipping for games and ops tools; GA / Plausible / SEO loops for marketplace growth decisions.</p>
           </li>
         </ul>
       </div>
@@ -1138,10 +1176,6 @@
           </p>
         </div>
         <div class="creds reveal">
-          Roadmaps · Agile<br />
-          UX research · IA · Prototyping<br />
-          TypeScript · React · Next.js · Node<br />
-          AWS · Turso · Stripe · Twilio<br />
           English · Spanish · Chinese
         </div>
       </div>
@@ -1158,7 +1192,6 @@
       <div class="wrap">
         <footer>
           <span>© 2026 Ian Herdegen</span>
-          <a href="pixel-art.html">Pixel art archive</a>
         </footer>
       </div>
     </section>
