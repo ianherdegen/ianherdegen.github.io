@@ -352,14 +352,7 @@
       object-fit: cover;
       transition: transform 1.1s var(--ease);
     }
-    .case-visual--fit {
-      background: #0a0c12;
-    }
-    .case-visual--fit img {
-      object-fit: contain;
-    }
     .case:hover .case-visual img { transform: scale(1.04); }
-    .case:hover .case-visual--fit img { transform: none; }
     .case-visual .badge {
       position: absolute;
       left: 0.85rem;
@@ -371,22 +364,6 @@
       background: rgba(18, 21, 26, 0.78);
       color: var(--white);
       padding: 0.4rem 0.65rem;
-    }
-
-    .poster-strip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 0.4rem;
-      margin-top: 0.75rem;
-    }
-    .poster-strip img {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      object-fit: cover;
-      filter: saturate(0.92);
-    }
-    @media (max-width: 640px) {
-      .poster-strip { grid-template-columns: repeat(2, 1fr); }
     }
 
 
@@ -933,7 +910,7 @@
             </div>
             <div class="case-visual">
               <img src="assets/buymyspot/screenshot.jpg" alt="BuyMySpot find-a-spot — map and listings in Ann Arbor" />
-              <span class="badge">Marketplace</span>
+              <span class="badge">Parking marketplace</span>
             </div>
           </a>
           <div class="project-stats">
@@ -1039,17 +1016,9 @@
               </p>
               <span class="case-read">Read full case study</span>
             </div>
-            <div>
-              <div class="case-visual case-visual--fit">
-                <img src="assets/borderland/crew.jpg" alt="Borderland crew at a Detroit arena — Jack of Hearts backdrop" />
-                <span class="badge">Live tournament</span>
-              </div>
-              <div class="poster-strip" aria-label="Borderland venue posters">
-                <img src="assets/borderland/Chroma.jpg" alt="Clubs arena poster — Chroma" />
-                <img src="assets/borderland/tangent.jpg" alt="Diamonds arena poster — Tangent Gallery" />
-                <img src="assets/borderland/Lincoln.jpg" alt="Spades arena poster — Lincoln Street Art Park" />
-                <img src="assets/borderland/Russell.jpg" alt="Finale poster — Russell Art Building" />
-              </div>
+            <div class="case-visual">
+              <img src="assets/borderland/crew-card.jpg" alt="Borderland crew at a Detroit arena — Jack of Hearts backdrop" />
+              <span class="badge">Event team</span>
             </div>
           </a>
           <div class="project-stats">
