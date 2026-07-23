@@ -198,7 +198,6 @@
           <li><strong>In-room games</strong> — interactive immersive player-to-player play; <strong>4 of 5</strong> games ran through a Socket.IO mobile app so venue setup was mostly décor, not AV engineering</li>
           <li><strong>Show-up ops</strong> — same stack for SMS / voice / email reminders and day-of admin — cloneable night-to-night</li>
           <li><strong>Prop &amp; décor tools</strong> — airship gore modeler → fabricatable PDF; giant card print tools so each immersive game night could decorate something new</li>
-          <li><strong>Satellites</strong> — Call for Crew, Beacon Brain (ops wiki + meetings), Finance; Cursor / MCP-style agent against Brain</li>
         </ul>
 
         <h2 class="reveal">How the system works</h2>
@@ -212,8 +211,7 @@
           <h2 class="reveal">The product story</h2>
           <p class="reveal">
             Player path first — how someone found Borderland, bought paid event access, showed up, played, and left with people they met —
-            then behind the scenes: planning, budget, props, and the ops stack that kept the season runnable
-            without sanding the fun off — and with a stack built to franchise later if the nights kept earning it.
+            then one behind-the-scenes craft beat: the airship construction tooling that made venue props fabricatable.
           </p>
 
           <p class="walk-phase reveal">Player path</p>
@@ -265,7 +263,7 @@
               <p class="walk-goal">Goal: get registered players into the building</p>
               <p>
                 Admin ran Twilio SMS and voice/voicemail (including machine detection for voicemail drops)
-                plus 29 templated email variants keyed to immersive game night, timing, and registration state —
+                plus templated email variants keyed to immersive game night, timing, and registration state —
                 same reminder stack every night, not a one-off Mailchimp scramble.
                 Reminding people is unglamorous. Not doing it empties a venue.
               </p>
@@ -342,143 +340,30 @@
 
           <div class="walk-step reveal">
             <div class="walk-copy">
-              <p class="walk-kicker">07 · Plan</p>
-              <h3>Immersive game nights with an event manager</h3>
-              <p class="walk-goal">Goal: nights that can actually run</p>
-              <p>
-                Software doesn’t book a room. I planned the season calendar and day-of shape with an event manager —
-                venues from Chroma through Russell, capacity, timing, and what “ready” meant before doors opened.
-                Access entitlements and admin had to match that plan: play vs watch, night caps, cutoffs —
-                so the product and the production weren’t two different stories.
-              </p>
-            </div>
-            <div class="walk-media">
-              <figure class="media-block media-placeholder" style="margin:0">
-                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for venue night or planning shot">
-                  <span class="media-placeholder-label">Add image</span>
-                  <span class="media-placeholder-hint">Venue night / floor layout / season calendar</span>
-                </div>
-                <figcaption>Planning — immersive game nights, capacity, day-of with an event manager</figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <div class="media-row reveal">
-            <figure class="media-block media-placeholder">
-              <div class="media-placeholder-frame" role="img" aria-label="Placeholder for Clubs or Diamonds immersive game night">
-                <span class="media-placeholder-label">Add image</span>
-                <span class="media-placeholder-hint">Clubs @ Chroma or Diamonds @ Tangent</span>
-              </div>
-              <figcaption>Early immersive game nights</figcaption>
-            </figure>
-            <figure class="media-block media-placeholder">
-              <div class="media-placeholder-frame" role="img" aria-label="Placeholder for Spades or Finale night">
-                <span class="media-placeholder-label">Add image</span>
-                <span class="media-placeholder-hint">Spades @ Lincoln or Finale @ Russell</span>
-              </div>
-              <figcaption>Later immersive game nights</figcaption>
-            </figure>
-          </div>
-
-          <div class="walk-step walk-step--flip reveal">
-            <div class="walk-copy">
-              <p class="walk-kicker">08 · Budget</p>
-              <h3>Don’t blow the budget</h3>
-              <p class="walk-goal">Goal: realistic spend — visible, controlled, not emptied on night one</p>
-              <p>
-                Live seasons die when nobody watches the money. <strong>Finance</strong> tracked spend with a preview-before-apply assistant
-                so venues, prizes, props, Twilio, and print stayed visible — without turning the crew into accountants.
-                The point wasn’t austerity theater. It was staying realistic so we didn’t torch the whole pot.
-              </p>
-            </div>
-            <div class="walk-media">
-              <figure class="media-block media-placeholder" style="margin:0">
-                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for Finance ledger screenshot">
-                  <span class="media-placeholder-label">Add image</span>
-                  <span class="media-placeholder-hint">Finance ledger / spend preview-apply</span>
-                </div>
-                <figcaption>Finance — visible spend, realistic budget</figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <div class="walk-step reveal">
-            <div class="walk-copy">
-              <p class="walk-kicker">09 · Props &amp; décor</p>
+              <p class="walk-kicker">07 · Airship construction</p>
               <h3>Interfaces that fabricate something new</h3>
-              <p class="walk-goal">Goal: each immersive game night can decorate without starting from scratch</p>
+              <p class="walk-goal">Goal: build the airship without redrawing by hand</p>
               <p>
-                Clubs needed a physical airship. I built the gore modeler — hull parameters in, fabricatable PDF patterns out —
-                so the prop could be cut and assembled instead of redrawn by hand. Giant card tools did the same for venue sculptures.
+                We needed a physical airship. I built the gore modeler — hull parameters in, fabricatable PDF patterns out —
+                so the prop could be cut and assembled instead of redrawn by hand.
                 That’s the craft bar: not a stock backdrop. Software that makes it cheaper and faster to put something new in the room.
               </p>
             </div>
             <div class="walk-media">
+              <figure class="media-block media-placeholder" style="margin:0 0 1rem">
+                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for built airship prop">
+                  <span class="media-placeholder-label">Add image</span>
+                  <span class="media-placeholder-hint">Finished airship / venue prop install</span>
+                </div>
+                <figcaption>Built prop in the room</figcaption>
+              </figure>
               <div class="showcase">
                 <div class="showcase-bar">
                   <span>Airship gore modeler</span>
-                  <a href="../demos/airship/" target="_blank" rel="noopener">Open full tool</a>
                 </div>
                 <iframe title="Airship gore pattern tool" src="../demos/airship/" loading="lazy"></iframe>
               </div>
             </div>
-          </div>
-
-          <div class="media-row reveal">
-            <figure class="media-block media-placeholder">
-              <div class="media-placeholder-frame" role="img" aria-label="Placeholder for built airship prop">
-                <span class="media-placeholder-label">Add image</span>
-                <span class="media-placeholder-hint">Finished airship / venue prop install</span>
-              </div>
-              <figcaption>Built prop in the room</figcaption>
-            </figure>
-            <figure class="media-block media-placeholder">
-              <div class="media-placeholder-frame" role="img" aria-label="Placeholder for giant cards or décor">
-                <span class="media-placeholder-label">Add image</span>
-                <span class="media-placeholder-hint">Giant cards / venue décor / print tools</span>
-              </div>
-              <figcaption>Cards &amp; décor tooling</figcaption>
-            </figure>
-          </div>
-
-          <div class="walk-step walk-step--flip reveal">
-            <div class="walk-copy">
-              <p class="walk-kicker">10 · Ops stack</p>
-              <h3>Brain, agent, and Call for Crew</h3>
-              <p class="walk-goal">Goal: run the season without living in DMs</p>
-              <p>
-                <strong>Beacon Brain</strong> is a Turso-backed ops wiki — meeting notes, runbooks, workbooks —
-                Notion-shaped for how we actually ran venues. I wired a Cursor / MCP-style agent against Brain
-                so notes and follow-ups could be drafted from the knowledge base instead of disappearing in chat.
-                <strong>Call for Crew</strong> recruited gamemakers and builders so each night had people behind the curtain.
-              </p>
-            </div>
-            <div class="walk-media">
-              <figure class="media-block media-placeholder" style="margin:0">
-                <div class="media-placeholder-frame" role="img" aria-label="Placeholder for Beacon Brain screenshot">
-                  <span class="media-placeholder-label">Add image</span>
-                  <span class="media-placeholder-hint">Brain wiki / meeting notes / workbook</span>
-                </div>
-                <figcaption>Brain — ops wiki for the season</figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <div class="media-row reveal">
-            <figure class="media-block media-placeholder">
-              <div class="media-placeholder-frame" role="img" aria-label="Placeholder for MCP agent against Brain">
-                <span class="media-placeholder-label">Add image</span>
-                <span class="media-placeholder-hint">MCP / Cursor agent querying Brain</span>
-              </div>
-              <figcaption>Agent against Brain</figcaption>
-            </figure>
-            <figure class="media-block media-placeholder">
-              <div class="media-placeholder-frame" role="img" aria-label="Placeholder for Call for Crew">
-                <span class="media-placeholder-label">Add image</span>
-                <span class="media-placeholder-hint">Call for Crew recruiting</span>
-              </div>
-              <figcaption>Call for Crew</figcaption>
-            </figure>
           </div>
         </section>
 
@@ -531,11 +416,6 @@
             <li>Cursor / agent tooling</li>
             <li>Print · physical builds</li>
           </ul>
-        </div>
-        <div class="sidebar-block">
-          <h3>Links</h3>
-          <a href="https://borderland.thebeaconhq.com" target="_blank" rel="noopener">Borderland</a><br />
-          <a href="https://www.instagram.com/thebeaconhq" target="_blank" rel="noopener">Instagram</a>
         </div>
       </aside>
     </div>
