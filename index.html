@@ -352,7 +352,14 @@
       object-fit: cover;
       transition: transform 1.1s var(--ease);
     }
+    .case-visual--fit {
+      background: #0a0c12;
+    }
+    .case-visual--fit img {
+      object-fit: contain;
+    }
     .case:hover .case-visual img { transform: scale(1.04); }
+    .case:hover .case-visual--fit img { transform: none; }
     .case-visual .badge {
       position: absolute;
       left: 0.85rem;
@@ -1033,7 +1040,7 @@
               <span class="case-read">Read full case study</span>
             </div>
             <div>
-              <div class="case-visual">
+              <div class="case-visual case-visual--fit">
                 <img src="assets/borderland/crew.jpg" alt="Borderland crew at a Detroit arena — Jack of Hearts backdrop" />
                 <span class="badge">Live tournament</span>
               </div>
